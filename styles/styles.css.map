@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,IAAI,CAAC;EACJ,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,MAAM;CACvB",
+    "sources": [
+        "../sass/pages/styles.scss",
+        "../sass/base/_global.scss",
+        "../sass/base/_setup.scss",
+        "../sass/abstracts/_mixins.scss",
+        "../sass/components/_buttons.scss",
+        "../sass/layouts/_header.scss",
+        "../sass/layouts/_questions.scss",
+        "../sass/layouts/_footer.scss"
+    ],
+    "names": [],
+    "file": "styles.css"
+}
