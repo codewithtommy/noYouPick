@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>No, You Pick!</title>
   <link rel="stylesheet" type="text/html" href="./styles/styles.css">
-  <link rel="stylesheet" type="text/html" href="./script.js">
 </head>
 <body>
   <!-- ===================================================================================-->
@@ -32,14 +31,19 @@
   <section class="questionMain section" id="question">
     <div class="wrapper">
       <h2>Time to choose!</h2>
-      <div class="inputsFlexAlign">
-        <!-- Question ONE/ Left Side: FOOD Selection -->
-        <input id="food" name="foodSelect" type="radio" value="food">
-        <label for="food">Food</label>
-        <!-- Question ONE/ Right Side: ACTIVITY Selection-->
-        <input id="activity" name="activitySelect" type="radio" value="activity">
-        <label for="activity">Activity</label>
-      </div>
+      <form>
+        <div class="inputsFlexAlign">
+          <!-- Question ONE/ Left Side: FOOD Selection -->
+          <input id="food" name="foodActivity" type="radio" value="food">
+          <label for="food">Food</label>
+          <!-- Question ONE/ Right Side: ACTIVITY Selection-->
+          <input id="activity" name="foodActivity" type="radio" value="activity">
+          <label for="activity">Activity</label>
+        </div>
+      </form>
+      <button class="heroButton">
+        <p>Next!</p>
+      </button>
     </div>
   </section>
   <!-- ===================================================================================-->
@@ -51,15 +55,18 @@
   <!-- ===================================================================================-->
   <section class="questionFood section">
     <div class="wrapper hidden">
-      <h2>What's next?</h2>
-      <div class="inputsFlexAlign">
-        <!-- Question TWO/ Left Side: AFFORDABLE Selection -->
-        <input id="affordable" name="foodSelect" type="radio" value="affordable">
-        <label for="affordable">Affordable. Heck Yes!</label>
-        <!-- Question TWO/ Right Side: TREAT YOURSELF Selection-->
-        <input id="treatYourself" name="activitySelect" type="radio" value="treatYourself">
-        <label for="treatYourself">Treat Yourself! Go ham!</label>
-      </div>
+      <form class="">
+        <h2>What's next?</h2>
+        <div class="inputsFlexAlign">
+          <!-- Question TWO/ Left Side: AFFORDABLE Selection -->
+          <input id="affordable" name="affordableTreat" type="radio" value="affordable">
+          <label for="affordable">Affordable. Heck Yes!</label>
+          <!-- Question TWO/ Right Side: TREAT YOURSELF Selection-->
+          <input id="treatYourself" name="affordableTreat" type="radio" value="treatYourself">
+          <label for="treatYourself">Treat Yourself! Go ham!</label>
+          <input id="" class="mainSubmit" name="" type="submit" value="Next!">
+        </div>
+      </form>
     </div>
   </section>
   <!-- ===================================================================================-->
@@ -71,15 +78,17 @@
   <!-- ===================================================================================-->
   <section class="questionActivity section">
     <div class="wrapper hidden">
-      <h2>Alright, let's do this!</h2>
-      <div class="inputsFlexAlign">
-        <!-- Question TWO/ Left Side: CHILLIN' LIKE A VILLIAN Selection -->
-        <input id="chillin" name="foodSelect" type="radio" value="chillin">
-        <label for="chillin">Chillin' Like A Villian?</label>
-        <!-- Question TWO/ Right Side: DATE? OUUU. Selection-->
-        <input id="date" name="activitySelect" type="radio" value="date">
-        <label for="date">Date? Ouuu.</label>
-      </div>
+      <form class="">
+        <h2>Alright, let's do this!</h2>
+        <div class="inputsFlexAlign">
+          <!-- Question TWO/ Left Side: CHILLIN' LIKE A VILLIAN Selection -->
+          <input id="chillin" name="chillinDate" type="radio" value="chillin">
+          <label for="chillin">Chillin' Like A Villian?</label>
+          <!-- Question TWO/ Right Side: DATE? OUUU. Selection-->
+          <input id="date" name="chillinDate" type="radio" value="date">
+          <label for="date">Date? Ouuu.</label>
+        </div>
+      </form>
     </div>
   </section>
   <!-- ===================================================================================-->
@@ -94,7 +103,6 @@
       <input id="" name="" type="submit" value="Let's Go!">
     </div>
     <div class="message">
-      <p>Make sure you select your options to get a recommendation back!</p>
     </div>
   </section>
   <!-- ===================================================================================-->
