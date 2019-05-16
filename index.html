@@ -25,88 +25,59 @@
   <!-- HEADER: HERO / END -->
   <!-- ===================================================================================-->
   <!-- ===================================================================================-->
-  <!-- SECTION: QUESTION MAIN / START 
+  <!-- SECTION: QUESTIONS MAIN / START 
     (Choose: Food or Activity) -->
   <!-- ===================================================================================-->
-  <section class="questionMain section" id="question">
-    <div class="wrapper">
-      <h2>Time to choose!</h2>
-      <form>
-        <div class="inputsFlexAlign">
-          <!-- Question ONE/ Left Side: FOOD Selection -->
-          <input id="food" name="foodActivity" type="radio" value="food">
-          <label for="food">Food</label>
-          <!-- Question ONE/ Right Side: ACTIVITY Selection-->
-          <input id="activity" name="foodActivity" type="radio" value="activity">
-          <label for="activity">Activity</label>
-        </div>
+  <div class="wrapper main">
+    <section class="questions section" id="question">
+      <form class="">
+        <!-- QUESTION ONE: FOOD OR ACTIVITY. -->
+        <section class="questionsOne">
+          <div class="flexAlign">
+            <!-- Left Side: FOOD Selection -->
+            <input id="food" name="foodActivity" type="radio" value="food">
+            <label for="food">Food</label>
+            <!-- Right Side: ACTIVITY Selection-->
+            <input id="activity" name="foodActivity" type="radio" value="activity">
+            <label for="activity">Activity</label>
+          </div>
+          <button class="heroButton">
+            <p>Next!</p>
+          </button>
+        </section>
+        <!-- QUESTION TWO A: FOOD: AFFORDABLE/ FOOD: TREAT YOURSELF. -->
+        <!-- NOTE: AMMEND this section based on selection. -->
+        <section class="questionsTwo">
+          <div class="flexAlign">
+            <!-- Left Side: AFFORDABLE Selection -->
+            <input id="affordable" name="affordableTreat" type="radio" value="affordable">
+            <label for="affordable">Affordable. Heck Yes!</label>
+            <!-- Right Side: TREAT YOURSELF Selection-->
+            <input id="treatYourself" name="affordableTreat" type="radio" value="treatYourself">
+            <label for="treatYourself">Treat Yourself! Go ham!</label>
+            <!-- Bottom: Button for Question TWO A -->
+            <input id="" class="mainSubmit" name="" type="submit" value="Next!">
+          </div>
+        </section>
+        <!-- QUESTION TWO B: ACTIVITY: CHILLIN/ ACTIVITY: DATE-->
+        <!-- NOTE: AMMEND this section based on selection. -->
+        <section class="questionsTwoB">
+          <div class="inputsFlexAlign">
+            <!-- Left Side: CHILLIN' LIKE A VILLIAN Selection -->
+            <input id="chillin" name="chillinDate" type="radio" value="chillin">
+            <label for="chillin">Chillin' Like A Villian?</label>
+            <!-- Right Side: DATE? OUUU. Selection-->
+            <input id="date" name="chillinDate" type="radio" value="date">
+            <label for="date">Date? Ouuu.</label>
+            <!-- Bottom: Button for Question TWO B -->
+            <input id="" class="mainSubmit" name="" type="submit" value="Next!">
+          </div>
+        </section>
       </form>
-      <button class="heroButton">
-        <p>Next!</p>
-      </button>
-    </div>
-  </section>
+    </section>
+  </div>
   <!-- ===================================================================================-->
   <!-- SECTION: QUESTION MAIN / END -->
-  <!-- ===================================================================================-->
-  <!-- ===================================================================================-->
-  <!-- SECTION: QUESTION FOOD LEFT / START 
-    (Choose: Affordable/ Treat yourself) -->
-  <!-- ===================================================================================-->
-  <section class="questionFood section">
-    <div class="wrapper hidden">
-      <form class="">
-        <h2>What's next?</h2>
-        <div class="inputsFlexAlign">
-          <!-- Question TWO/ Left Side: AFFORDABLE Selection -->
-          <input id="affordable" name="affordableTreat" type="radio" value="affordable">
-          <label for="affordable">Affordable. Heck Yes!</label>
-          <!-- Question TWO/ Right Side: TREAT YOURSELF Selection-->
-          <input id="treatYourself" name="affordableTreat" type="radio" value="treatYourself">
-          <label for="treatYourself">Treat Yourself! Go ham!</label>
-          <input id="" class="mainSubmit" name="" type="submit" value="Next!">
-        </div>
-      </form>
-    </div>
-  </section>
-  <!-- ===================================================================================-->
-  <!-- SECTION: QUESTION FOOD LEFT / END -->
-  <!-- ===================================================================================-->
-  <!-- ===================================================================================-->
-  <!-- SECTION: QUESTION ACTIVITY RIGHT /START 
-    (Choose: Chillin like a Villian/ Date Night? Ouuu.)-->
-  <!-- ===================================================================================-->
-  <section class="questionActivity section">
-    <div class="wrapper hidden">
-      <form class="">
-        <h2>Alright, let's do this!</h2>
-        <div class="inputsFlexAlign">
-          <!-- Question TWO/ Left Side: CHILLIN' LIKE A VILLIAN Selection -->
-          <input id="chillin" name="chillinDate" type="radio" value="chillin">
-          <label for="chillin">Chillin' Like A Villian?</label>
-          <!-- Question TWO/ Right Side: DATE? OUUU. Selection-->
-          <input id="date" name="chillinDate" type="radio" value="date">
-          <label for="date">Date? Ouuu.</label>
-        </div>
-      </form>
-    </div>
-  </section>
-  <!-- ===================================================================================-->
-  <!-- SECTION: QUESTION ACTIVITY RIGHT / END -->
-  <!-- ===================================================================================-->
-  <!-- ===================================================================================-->
-  <!-- SECTION: LET'S GO / START 
-    (Button to Submit)-->
-  <!-- ===================================================================================-->
-  <section class="letsGo section" id="submit">
-    <div class="wrapper">
-      <input id="" name="" type="submit" value="Let's Go!">
-    </div>
-    <div class="message">
-    </div>
-  </section>
-  <!-- ===================================================================================-->
-  <!-- SECTION: LET'S GO RIGHT / END -->
   <!-- ===================================================================================-->
   <!-- ===================================================================================-->
   <!-- SECTION: RESULT / START 

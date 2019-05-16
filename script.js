@@ -116,10 +116,10 @@ $(document).ready(function (){
 			console.log(`Food! Affordable!`);
 		} else if (($(`#food:checked`).val() && $(`#treatYourself:checked`).val())){
 			console.log(`Food! Treat Yourself!`);
-		// } else if (($(`#activity:checked`).val() && $(`#chillin:checked`).val())){
-		// 	console.log(`Activity! Chillin!`);
-		// } else if (($(`#activity:checked`).val() && $(`#date:checked`).val())){
-		// 	console.log(`Activity! Date!`); 
+		} else if (($(`#activity:checked`).val() && $(`#chillin:checked`).val())){
+			console.log(`Activity! Chillin!`);
+		} else if (($(`#activity:checked`).val() && $(`#date:checked`).val())){
+			console.log(`Activity! Date!`); 
 		}
 
 
