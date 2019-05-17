@@ -132,10 +132,9 @@ const activity = [
 			// 	console.log(`Activity! Date!`); 
 			// }
 
-
+// Global variable created for foodAfford. (This is a place to store the FOOD, AFFORDABLE selections)
 const foodAfford = [];
-// console.log (foodAfford);
-
+// Global function created for foodAfford. (This function is created so we can grab the foodAfford's new array and generate a random index value so it can be returned to the user.)
 function randomIndex(foodAfford) {
 
 	const index = Math.floor(Math.random() * foodAfford.length);
@@ -145,19 +144,23 @@ function randomIndex(foodAfford) {
 $(document).ready(function(){
 
 	$(`form`).on(`submit`, function(event) {
+		// Set a preventDefault behaviour for submit buttons.
 		event.preventDefault();
 
+		// IF FOOD && AFFORDABLE are checked...
 		if ($(`#food:checked`).val() && $(`#affordable:checked`).val()) {
-			// console.log(`hi`)
+			// RUN a FOR loop-de-loop for the FOOD list...
 			for (let i = 0; i < food.length; i++) {
+				// IF... FOOD price is equal to the STRING `affordable`...
 				if (food[i].price === `affordable`) {
+					// GET the FOOD names with the STRING `affordable` and PUSH them into the newly created foodAfford array...
 					foodAfford.push(food[i].name);
-					// console.log(`hi`)
 				}
 			}
-
+			// Create a variable and make sure it holds onto whatever FUNCTION it produces from randomIndex(foodAfford).
 			const foodResult = randomIndex(foodAfford);
-			console.log(foodResult);
-		}
+			// DISPLAY/ RETURN the random results from the array to: (div/headings/paragraph etc.)
+			// console.log(foodResult);
+		};
 	})
 })
