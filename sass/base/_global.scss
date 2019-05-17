@@ -1,4 +1,40 @@
+// FONT
+
+$fontPri: 'Roboto', sans-serif;
+$fontSec: 'Raleway', sans-serif;
+
+// COLOR PALETTE 
+
+$colPrim: #FF7F50;
+$colSeco: #FFB350;
+$colThrd: #E24779;
+$colComp: #37B079;
+$wht: #FFFFFF;
+$blk: #000000;
+
+// LINEWEIGHT
+
+$light: '300';
+$normal: '400';
+$semibold: '400';
+$bold: '700';
+
 html {
 	font-size: 125%;
 	scroll-behavior: smooth;
+}
+
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+	width: 100%;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0% 10%;
+	width: 100%;
 }
