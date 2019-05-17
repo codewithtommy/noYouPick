@@ -23,6 +23,14 @@ const food = [
 		price: "affordable", 
 	},
 	{
+		name: 'Vietnamese Pho Noodles',
+		price: "affordable",
+	},
+	{
+		name: 'Food Court or Street Food',
+		price: "affordable",
+	},
+	{
 		name: 'Shawarma',
 		price: "affordable",
 	},
@@ -35,7 +43,7 @@ const food = [
 		price: "expensive",
 	},
 	{
-		name: 'Japense Sushi Bar',
+		name: 'Japanese Sushi Bar',
 		price: "expensive",
 	},
 	{
@@ -44,6 +52,10 @@ const food = [
 	},
 	{
 		name: 'Italian Cuisine',
+		price: "expensive",
+	},
+	{
+		name: 'Korean Barbeque',
 		price: "expensive",
 	},
 	{
@@ -78,6 +90,10 @@ const activity = [
 		type: "chillin",
 	},
 	{
+		name: 'Patio Sessions',
+		type: "chillin",
+	},
+	{
 		name: 'Exploring Downtown',
 		type: "date",
 	},
@@ -98,38 +114,39 @@ const activity = [
 		type: "date",
 	},
 	{
-		name: 'Desserts',
+		name: 'Redemption Arcades',
 		type: "date",
 	},
+	{
+		name: 'Desserts',
+		type: "date",
+	}
 ]
-		// Set a default behaviour for submit buttons removed.
-
-		// Capture/ Log the USER's selection. USER will have to choose a combination of: Food/ Activity OR Affordable/ Treat OR Chillin/ Date. 
-
-
-			// } else if (($(`#food:checked`).val() && $(`#treatYourself:checked`).val())){
-			// 	console.log(`Food! Treat Yourself!`);
-			// } else if (($(`#activity:checked`).val() && $(`#chillin:checked`).val())){
-			// 	console.log(`Activity! Chillin!`);
-			// } else if (($(`#activity:checked`).val() && $(`#date:checked`).val())){
-			// 	console.log(`Activity! Date!`); 
-			// }
 
 // Global variable created for appropriate choices. (This is a place to store the selections based on USER choice selection)
 const foodAfford = [];
 const foodExpensive = [];
+const activityChillin = [];
+const activityDate = [];
 
 // Global function created for foodAfford. (This function is created so we can grab the foodAfford's new array and generate a random index value so it can be returned to the user.)
 function randomIndex(foodAfford) {
-
 	const index = Math.floor(Math.random() * foodAfford.length);
 	return foodAfford[index]
 }
 
 function randomIndex(foodExpensive) {
-
 	const index = Math.floor(Math.random() * foodExpensive.length);
 	return foodExpensive[index]
+}
+function randomIndex(activityChillin) {
+	const index = Math.floor(Math.random() * activityChillin.length);
+	return activityChillin[index]
+}
+
+function randomIndex(activityDate) {
+	const index = Math.floor(Math.random() * activityDate.length);
+	return activityDate[index]
 }
 
 $(document).ready(function(){
@@ -164,11 +181,27 @@ $(document).ready(function(){
 			const foodResult = randomIndex(foodExpensive);
 			console.log(foodResult);
 		}
+
+		// IF, ACTIVITY && CHILLIN are checked. Do the following...
+		if ($(`#activity:checked`).val() && $(`#chillin:checked`).val()) {
+			for (let i = 0; i < activity.length; i++) {
+				if (activity[i].type === `chillin`) {
+					activityChillin.push(activity[i].name);
+				}
+			}
+
+			const activityResult = randomIndex(activityChillin);
+			console.log(activityResult);
+
+			// ELSE IF, ACTIVITY && DATE are checked. Do the following...
+		} else if ($(`#activity:checked`).val() && $(`#date:checked`).val()) {
+			for (let i = 0; i < activity.length; i++) {
+				if (activity[i].type === `date`) {
+					activityDate.push(activity[i].name);
+				}
+			}
+			const activityResult = randomIndex(activityDate);
+			console.log(activityResult);
+		}
 	})
 })
-
-//  else if ($(`#food:checked`).val() && $(`#expensive:checked`).val()) {
-// 	if (food[i].price === `expensive`) {
-// 		foodExpensive.push(food[i].name)
-// 	}
-// }
