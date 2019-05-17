@@ -1,0 +1,55 @@
+// RESPONSIVE
+
+@mixin tablet {
+	@media only screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin phone-large {
+	@media only screen and (max-width: 425px) {
+		@content;
+	}
+}
+
+@mixin phone-medium {
+	@media only screen and (max-width: 325px) {
+		@content;
+	}
+}
+
+@mixin phone-small {
+	@media only screen and (max-width: 320px) {
+		@content;
+	}
+}
+
+// FONTS
+
+@mixin fontProp ($fFamily, $fSize, $fWeight) {
+  font-family: $fFamily;
+  font-size: $fSize;
+  font-weight: $fWeight;
+}
+
+@mixin paragraphSpace ($lineHeight, $letterSpace) {
+	line-height: $lineHeight;
+	letter-spacing: $letterSpace;
+}
+
+// LAYOUT/ POSITIONING: CENTER
+
+@mixin flexCenter ($acon, $disp, $colu, $cent) {
+  align-content: $acon;
+	display: $disp;
+	flex-direction: $colu;
+	justify-content: $cent;
+}
+
+@mixin position ($pos, $top, $rig, $bot, $lef) {
+	position: $pos;
+  top: $top;
+  right: $rig;
+  bottom: $bot;
+	left: $lef;
+}

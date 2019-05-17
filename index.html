@@ -1,116 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>No, You Pick!</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700|Roboto:300,400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/html" href="./styles/styles.css">
-</head>
-<body>
-  <!-- ===================================================================================-->
-  <!-- HEADER: HERO / START 
-    (H1, Hero Image, Start) -->
-  <!-- ===================================================================================-->
-  <header  class="hero section" id="hero">
-    <div class="wrapper">
-      <h1>No, You Pick!</h1>
-      <img src="" alt="">
-      <button class="heroButton">
-        <p>Start!</p>
-      </button>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>No, You Pick!</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700|Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/html" href="./styles/styles.css">
+  </head>
+  <body>
+    <!-- ===================================================================================-->
+    <!-- HEADER: HERO / START 
+      (H1, Hero Image, Start) -->
+    <!-- ===================================================================================-->
+    <header class="hero section" id="hero">
+      <div class="wrapper">
+        <h1>No, You Pick!</h1>
+        <img src="" alt="">
+        <button class="heroButton">
+          <p>Start!</p>
+        </button>
+      </div>
+    </header>
+    <!-- ===================================================================================-->
+    <!-- HEADER: HERO / END -->
+    <!-- ===================================================================================-->
+    <!-- ===================================================================================-->
+    <!-- SECTION: QUESTIONS MAIN / START 
+      (Choose: Food or Activity) -->
+    <!-- ===================================================================================-->
+    <div class="wrapper main">
+      <section class="questions section" id="question">
+        <form class="">
+          <!-- QUESTION ONE: FOOD OR ACTIVITY. -->
+          <section class="questionsOne">
+            <h2>Choose Your Path!</h2>
+            <div class="flexAlign">
+              <!-- Left Side: FOOD Selection -->
+              <input id="food" name="foodActivity" type="radio" value="food">
+              <label for="food">Food</label>
+              <!-- Right Side: ACTIVITY Selection-->
+              <input id="activity" name="foodActivity" type="radio" value="activity">
+              <label for="activity">Activity</label>
+            </div>
+            <button class="heroButton">
+              <p>Next!</p>
+            </button>
+          </section>
+          <!-- QUESTION TWO A: FOOD: AFFORDABLE/ FOOD: TREAT YOURSELF. -->
+          <!-- NOTE: AMMEND this section based on selection. -->
+          <section class="questionsTwoA">
+            <h2>Hurry! I'm Hungry!</h2>
+            <div class="flexAlign">
+              <!-- Left Side: AFFORDABLE Selection -->
+              <input id="affordable" name="affordableTreat" type="radio" value="affordable">
+              <label for="affordable">Affordable. Heck Yes!</label>
+              <!-- Right Side: TREAT YOURSELF Selection-->
+              <input id="expensive" name="affordableTreat" type="radio" value="expensive">
+              <label for="expensive">Treat Yourself! Go ham!</label>
+              <!-- Bottom: Button for Question TWO A -->
+              <input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!">
+            </div>
+          </section>
+          <!-- QUESTION TWO B: ACTIVITY: CHILLIN/ ACTIVITY: DATE-->
+          <!-- NOTE: AMMEND this section based on selection. -->
+          <section class="questionsTwoB">
+            <h2>Sweet! Let's go!</h2>
+            <div class="flexAlign">
+              <!-- Left Side: CHILLIN' LIKE A VILLIAN Selection -->
+              <input id="chillin" name="chillinDate" type="radio" value="chillin">
+              <label for="chillin">Chillin' Like A Villian?</label>
+              <!-- Right Side: DATE? OUUU. Selection-->
+              <input id="date" name="chillinDate" type="radio" value="date">
+              <label for="date">Date? Ouuu.</label>
+              <!-- Bottom: Button for Question TWO B -->
+              <input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!">
+            </div>
+          </section>
+        </form>
+      </section>
     </div>
-  </header>
-  <!-- ===================================================================================-->
-  <!-- HEADER: HERO / END -->
-  <!-- ===================================================================================-->
-  <!-- ===================================================================================-->
-  <!-- SECTION: QUESTIONS MAIN / START 
-    (Choose: Food or Activity) -->
-  <!-- ===================================================================================-->
-  <div class="wrapper main">
-    <section class="questions section" id="question">
-      <form class="">
-        <!-- QUESTION ONE: FOOD OR ACTIVITY. -->
-        <section class="questionsOne">
-          <h2>Choose Your Path!</h2>
-          <div class="flexAlign">
-            <!-- Left Side: FOOD Selection -->
-            <input id="food" name="foodActivity" type="radio" value="food">
-            <label for="food">Food</label>
-            <!-- Right Side: ACTIVITY Selection-->
-            <input id="activity" name="foodActivity" type="radio" value="activity">
-            <label for="activity">Activity</label>
-          </div>
-          <button class="heroButton">
-            <p>Next!</p>
-          </button>
-        </section>
-        <!-- QUESTION TWO A: FOOD: AFFORDABLE/ FOOD: TREAT YOURSELF. -->
-        <!-- NOTE: AMMEND this section based on selection. -->
-        <section class="questionsTwoA">
-          <h2>Hurry! I'm Hungry!</h2>
-          <div class="flexAlign">
-            <!-- Left Side: AFFORDABLE Selection -->
-            <input id="affordable" name="affordableTreat" type="radio" value="affordable">
-            <label for="affordable">Affordable. Heck Yes!</label>
-            <!-- Right Side: TREAT YOURSELF Selection-->
-            <input id="expensive" name="affordableTreat" type="radio" value="expensive">
-            <label for="expensive">Treat Yourself! Go ham!</label>
-            <!-- Bottom: Button for Question TWO A -->
-            <input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!">
-          </div>
-        </section>
-        <!-- QUESTION TWO B: ACTIVITY: CHILLIN/ ACTIVITY: DATE-->
-        <!-- NOTE: AMMEND this section based on selection. -->
-        <section class="questionsTwoB">
-          <h2>Sweet! Let's go!</h2>
-          <div class="flexAlign">
-            <!-- Left Side: CHILLIN' LIKE A VILLIAN Selection -->
-            <input id="chillin" name="chillinDate" type="radio" value="chillin">
-            <label for="chillin">Chillin' Like A Villian?</label>
-            <!-- Right Side: DATE? OUUU. Selection-->
-            <input id="date" name="chillinDate" type="radio" value="date">
-            <label for="date">Date? Ouuu.</label>
-            <!-- Bottom: Button for Question TWO B -->
-            <input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!">
-          </div>
-        </section>
-      </form>
+    <!-- ===================================================================================-->
+    <!-- SECTION: QUESTION MAIN / END -->
+    <!-- ===================================================================================-->
+    <!-- ===================================================================================-->
+    <!-- SECTION: RESULT / START 
+      (H3, Result)-->
+    <!-- ===================================================================================-->
+    <section class="result section" id="result">
+      <h2>Here You Go!</h2>
+      <p>Looks like it's going to be...</p>
     </section>
-  </div>
-  <!-- ===================================================================================-->
-  <!-- SECTION: QUESTION MAIN / END -->
-  <!-- ===================================================================================-->
-  <!-- ===================================================================================-->
-  <!-- SECTION: RESULT / START 
-    (H3, Result)-->
-  <!-- ===================================================================================-->
-  <section class="result section" id="result">
-    <h2>Here You Go!</h2>
-    <p>Looks like it's going to be...</p>
-  </section>
-  <!-- ===================================================================================-->
-  <!-- SECTION: RESULT RIGHT / END -->
-  <!-- ===================================================================================-->
-  <!-- ===================================================================================-->
-  <!-- FOOTER: COPYRIGHT / START 
-    (Credits/ Copyright/ Twitter/ Instagram) -->
-  <!-- ===================================================================================-->
-  <footer class="copyright section" id="copyright">
+    <!-- ===================================================================================-->
+    <!-- SECTION: RESULT RIGHT / END -->
+    <!-- ===================================================================================-->
+    <!-- ===================================================================================-->
+    <!-- FOOTER: COPYRIGHT / START 
+      (Credits/ Copyright/ Twitter/ Instagram) -->
+    <!-- ===================================================================================-->
+    <footer class="copyright section" id="copyright">
 
-  </footer>
-  <!-- ===================================================================================-->
-  <!-- FOOTER: COPYRIGHT / END -->
-  <!-- ===================================================================================-->
-  <!-- ===================================================================================-->
-  <!-- JQUERY/ JAVASCRIPT: START -->
-  <!-- ===================================================================================-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="script.js"></script>
-  <!-- ===================================================================================-->
-  <!-- JQUERY/ JAVASCRIPT: END -->
-  <!-- ===================================================================================-->
-</body>
+    </footer>
+    <!-- ===================================================================================-->
+    <!-- FOOTER: COPYRIGHT / END -->
+    <!-- ===================================================================================-->
+    <!-- ===================================================================================-->
+    <!-- JQUERY/ JAVASCRIPT: START -->
+    <!-- ===================================================================================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./scripts/script.js"></script>
+    <!-- ===================================================================================-->
+    <!-- JQUERY/ JAVASCRIPT: END -->
+    <!-- ===================================================================================-->
+  </body>
 </html>

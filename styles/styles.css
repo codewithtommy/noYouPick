@@ -25,6 +25,10 @@ img {
   width: 100%;
 }
 
+h1 {
+  font-size: 6rem;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }
@@ -202,5 +206,14 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
           clip-path: inset(100%);
   clip: rect(0 0 0);
   overflow: hidden;
+}
+
+header {
+  background: #FF7F50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  max-width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
