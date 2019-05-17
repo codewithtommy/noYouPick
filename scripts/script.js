@@ -156,6 +156,10 @@ $(document).ready(function(){
 
 		// IF, FOOD is checked. Bring up/ append this:
 		if ($(`#food:checked`).val()) {
+
+			// Prevent the USER from submiting more than once on submit, after selecting FOOD/ ACTIVITY.
+			document.getElementById(`mainSubmit`).disabled = true;
+
 			$(`.questionsTwo`).html(
 				`<section class="questionsTwoA" id="twoA">
 					<h2>Hurry! I'm Hungry!</h2>
@@ -168,7 +172,11 @@ $(document).ready(function(){
 					</div>
 				</section>`
 			);
+			
 		} else if ($(`#activity:checked`).val()) {
+
+			document.getElementById(`mainSubmit`).disabled = true;
+
 			$(`.questionsTwo`).html(
 				`<section class="questionsTwoB" id="twoB">
 					<h2>Sweet! Let's go!</h2>
@@ -191,9 +199,9 @@ $(document).ready(function(){
 		// IF, FOOD && AFFORDABLE are checked. Do the following...
 		if ($(`#food:checked`).val() && $(`#affordable:checked`).val()) {
 
-			// Prevent the USER from submiting more than once on submit for Questions after FOOD/ ACTIVITY.
+			// Prevent the USER from submiting more than once on submit for Questions after selecting FOOD/ AFFORDABLE.
 			document.getElementById(`subSubmit`).disabled = true;
-			
+
 			// RUN a FOR loop-de-loop for the FOOD list...
 			for (let i = 0; i < food.length; i++) {
 				// IF... FOOD price is equal to the STRING `affordable`...
@@ -202,6 +210,7 @@ $(document).ready(function(){
 					foodAfford.push(food[i].name);
 				}
 			}
+			
 			// Create a variable and make sure it holds onto whatever FUNCTION it produces from randomIndex(foodAfford).
 			const foodResult = randomIndex(foodAfford);
 			// DISPLAY/ RETURN the random results from the array to: (div/headings/paragraph etc.)
@@ -218,7 +227,10 @@ $(document).ready(function(){
 			);
 		
 		// ELSE IF, FOOD && EXPENSIVE are checked. Do the following...
-		} else if ($(`#food:checked`).val() && $(`#expensive:checked`).val()) {
+		} else if ($(`#food:checked`).val() && $(`#expensive:checked`).val())
+
+			document.getElementById(`subSubmit`).disabled = true;
+		{
 			for (let i = 0; i < food.length; i++) {
 				if (food[i].price === `expensive`) {
 					foodExpensive.push(food[i].name);
@@ -239,6 +251,9 @@ $(document).ready(function(){
 
 		// IF, ACTIVITY && CHILLIN are checked. Do the following...
 		if ($(`#activity:checked`).val() && $(`#chillin:checked`).val()) {
+
+			document.getElementById(`subSubmit`).disabled = true;
+			
 			for (let i = 0; i < activity.length; i++) {
 				if (activity[i].type === `chillin`) {
 					activityChillin.push(activity[i].name);
@@ -259,6 +274,9 @@ $(document).ready(function(){
 
 			// ELSE IF, ACTIVITY && DATE are checked. Do the following...
 		} else if ($(`#activity:checked`).val() && $(`#date:checked`).val()) {
+
+			document.getElementById(`subSubmit`).disabled = true;
+			
 			for (let i = 0; i < activity.length; i++) {
 				if (activity[i].type === `date`) {
 					activityDate.push(activity[i].name);
