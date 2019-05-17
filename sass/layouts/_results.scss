@@ -1,0 +1,11 @@
+.results {
+  background: linear-gradient($colSeco, $colThrd);
+	display: flex;
+}
+
+.resultsContent {
+  background: $wht;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px $blk;
+  padding: 5%;
+}

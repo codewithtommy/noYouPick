@@ -21,12 +21,19 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0% 10%;
+  padding: 0% 25% 7.5%;
   width: 100%;
 }
 
+p {
+  margin: 0%;
+}
+
 h1 {
-  font-size: 6rem;
+  font-size: 6.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-shadow: 5px 2px 5px #000000;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
@@ -208,12 +215,72 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
+.heroButton {
+  background: #FFB64D;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 15px #000000;
+          box-shadow: 2px 2px 15px #000000;
+  color: #000000;
+  border: transparent;
+  font-size: 1.25rem;
+  padding: 2.5% 5%;
+}
+
+footer {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF864C));
+  background: linear-gradient(#FF864C);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .wrapper {
+  padding-bottom: 0%;
+}
+
+footer p {
+  text-align: center;
+}
+
 header {
-  background: #FF7F50;
+  background: -webkit-gradient(linear, left top, left bottom, from(#55A4F1), to(#55A4F1));
+  background: linear-gradient(#55A4F1, #55A4F1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
   max-width: 100%;
+}
+
+.questions {
+  background: -webkit-gradient(linear, left top, left bottom, from(#55A4F1), to(#FFD54C));
+  background: linear-gradient(#55A4F1, #FFD54C);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form {
+  background: #FAFAFA;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 15px #000000;
+          box-shadow: 2px 2px 15px #000000;
+  padding: 5%;
+}
+
+.results {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFD54C), to(#FF864C));
+  background: linear-gradient(#FFD54C, #FF864C);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.resultsContent {
+  background: #FFFFFF;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 15px #000000;
+          box-shadow: 2px 2px 15px #000000;
+  padding: 5%;
 }
 /*# sourceMappingURL=styles.css.map */

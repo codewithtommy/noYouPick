@@ -1,5 +1,5 @@
 header {
-  background: $colPrim;
+  background: linear-gradient($colPrim, $colPrim);
 	display: flex;
 	height: 100vh;
 	max-width: 100%;

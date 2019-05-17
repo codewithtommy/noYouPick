@@ -1,0 +1,19 @@
+.questions {
+  background: linear-gradient($colPrim, $colSeco);
+	display: flex;
+}
+
+form {
+  background: $whtbg;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px $blk;
+  padding: 5%;
+}
+
+// .questionsTwoA {
+//   display: none;
+// }
+
+// .questionsTwoB {
+//   display: none;
+// }

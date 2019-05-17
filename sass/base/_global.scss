@@ -5,11 +5,12 @@ $fontSeco: 'Raleway', sans-serif;
 
 // COLOR PALETTE 
 
-$colPrim: #FF7F50;
-$colSeco: #FFB350;
-$colThrd: #E24779;
-$colComp: #37B079;
+$colPrim: #55A4F1;
+$colSeco: #FFD54C;
+$colThrd: #FF864C;
+$colComp: #FFB64D;
 $wht: #FFFFFF;
+$whtbg: #FAFAFA;
 $blk: #000000;
 
 // LINEWEIGHT
@@ -35,10 +36,16 @@ img {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 0% 10%;
+	padding: 0% 25% 7.5%;
 	width: 100%;
 }
 
+p {
+	margin: 0%;
+}
+
 h1 {
-	font-size: 6rem;
+	@include fontProp (null, 6.5rem, 700);
+	color: $wht;
+	text-shadow: 5px 2px 5px $blk;
 }

@@ -1,9 +1,9 @@
-// 1.) START: USER clicks on button on the HERO page to smooth scroll down to questions.
-// 2.) QUESTION ONE: GET the USER to select either FOOD or ACTIVITY.
-// 3.) QUESTION TWO(A): IF the USER selects FOOD. GET the USER to select either AFFORDABLE or EXPENSIVE.
-// 3b.)RESULT: IF the USER selects either AFFORDABLE or EXPENSIVE. Go to the ARRAY lists for either, GENERATE a random value from the list and return a value for the USER.
-// 4.) QUESTION TWO(B): IF the USER selects ACTIVITY. GET the USER to select either CHILLIN' LIKE A VILLIAN or DATE? OUUU.
-// 4b.)RESULT: IF the USER selects either CHILLIN' or DATE. Go to the ARRAY lists for either, GENERATE a random value from the list and return a value for the USER.
+// HOW DOES IT WORK?
+// 1.) USER is given two choices. Food or Activity
+// 2.) After selecting Food or Activity. USER is given another set of choice based on what they chose for the first. 
+// 2a.) FOOD: Affordable or Expensive?
+// 2b.) ACTIVITY: Chillin' or Date?
+// 3.) USER's selection will go into the appropriate array and display a random generated result.
 
 const food = [
 	{
@@ -151,12 +151,49 @@ function randomIndex(activityDate) {
 
 $(document).ready(function(){
 
+	$(`form`).one(`submit`, function(event) {
+		event.preventDefault();
+
+		// IF, FOOD is checked. Bring up/ append this:
+		if ($(`#food:checked`).val()) {
+			$(`.questionsTwo`).html(
+				`<section class="questionsTwoA" id="twoA">
+					<h2>Hurry! I'm Hungry!</h2>
+					<div class="flexAlign">
+						<input id="affordable" name="affordableTreat" type="radio" value="affordable">
+						<label for="affordable">Affordable. Heck Yes!</label>
+						<input id="expensive" name="affordableTreat" type="radio" value="expensive">
+						<label for="expensive">Treat Yourself! Go ham!</label>
+						<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!">
+					</div>
+				</section>`
+			);
+		} else if ($(`#activity:checked`).val()) {
+			$(`.questionsTwo`).html(
+				`<section class="questionsTwoB" id="twoB">
+					<h2>Sweet! Let's go!</h2>
+					<div class="flexAlign">
+						<input id="chillin" name="chillinDate" type="radio" value="chillin">
+						<label for="chillin">Chillin' Like A Villian?</label>
+						<input id="date" name="chillinDate" type="radio" value="date">
+						<label for="date">Date? Ouuu.</label>
+						<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!">
+					</div>
+				</section>`
+			);
+		}
+	})
+
 	$(`form`).on(`submit`, function(event) {
 		// Set a preventDefault behaviour for submit buttons.
 		event.preventDefault();
 
 		// IF, FOOD && AFFORDABLE are checked. Do the following...
 		if ($(`#food:checked`).val() && $(`#affordable:checked`).val()) {
+
+			// Prevent the USER from submiting more than once on submit for Questions after FOOD/ ACTIVITY.
+			document.getElementById(`subSubmit`).disabled = true;
+			
 			// RUN a FOR loop-de-loop for the FOOD list...
 			for (let i = 0; i < food.length; i++) {
 				// IF... FOOD price is equal to the STRING `affordable`...
@@ -169,7 +206,16 @@ $(document).ready(function(){
 			const foodResult = randomIndex(foodAfford);
 			// DISPLAY/ RETURN the random results from the array to: (div/headings/paragraph etc.)
 			// NOTE: Log console.log here to do tests/ debug
-			console.log(foodResult);
+			// console.log(foodResult);
+			$(`.results`).html(
+				`<div class="wrapper main">
+					<div class="resultsContent">
+						<h2>Here You Go!</h2>
+						<p>Looks like it's going to be...</p>
+						<p class="resultText">${foodResult}</p>
+					</div>
+				</div>`
+			);
 		
 		// ELSE IF, FOOD && EXPENSIVE are checked. Do the following...
 		} else if ($(`#food:checked`).val() && $(`#expensive:checked`).val()) {
@@ -179,7 +225,16 @@ $(document).ready(function(){
 				}
 			}
 			const foodResult = randomIndex(foodExpensive);
-			console.log(foodResult);
+			// console.log(foodResult);
+			$(`.results`).html(
+				`<div class="wrapper main">
+					<div class="resultsContent">
+						<h2>Here You Go!</h2>
+						<p>Looks like it's going to be...</p>
+						<p class="resultText">${foodResult}</p>
+					</div>
+				</div>`
+			);
 		}
 
 		// IF, ACTIVITY && CHILLIN are checked. Do the following...
@@ -191,7 +246,16 @@ $(document).ready(function(){
 			}
 
 			const activityResult = randomIndex(activityChillin);
-			console.log(activityResult);
+			// console.log(activityResult);
+			$(`.results`).html(
+				`<div class="wrapper main">
+					<div class="resultsContent">
+						<h2>Here You Go!</h2>
+						<p>Looks like it's going to be...</p>
+						<p class="resultText">${activityResult}</p>
+					</div>
+				</div>`
+			);
 
 			// ELSE IF, ACTIVITY && DATE are checked. Do the following...
 		} else if ($(`#activity:checked`).val() && $(`#date:checked`).val()) {
@@ -201,7 +265,16 @@ $(document).ready(function(){
 				}
 			}
 			const activityResult = randomIndex(activityDate);
-			console.log(activityResult);
+			// console.log(activityResult);
+			$(`.results`).html(
+				`<div class="wrapper main">
+					<div class="resultsContent">
+						<h2>Here You Go!</h2>
+						<p>Looks like it's going to be...</p>
+						<p class="resultText">${activityResult}</p>
+					</div>
+				</div>`
+			);
 		}
 	})
 })
