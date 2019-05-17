@@ -20,7 +20,7 @@ const food = [
 	},
 	{
 		name: 'Wings',
-		price: "affordable",
+		price: "affordable", 
 	},
 	{
 		name: 'Shawarma',
@@ -102,44 +102,62 @@ const activity = [
 		type: "date",
 	},
 ]
+// Set all global varibles/ functions here before document.ready fires.
 
-$(document).ready(function (){
-	console.log(`Pizzaaaa is hawt and ready`);
+// Set a global varible for the USER's 
+// const youChoose = {};
+
+// youChoose.getResults = (food) => {
+// 	console.log(food);
+
+// 	for (let i = 0; i <food.length; i++) {
+// 		$(`.result`)
+// 			.append(`<p>${food[i].price}</p>`);
+// 	}
+// }
+
+
+
+
+		// Set a default behaviour for submit buttons removed.
+
+		// Capture/ Log the USER's selection. USER will have to choose a combination of: Food/ Activity OR Affordable/ Treat OR Chillin/ Date. 
+
+
+			// } else if (($(`#food:checked`).val() && $(`#treatYourself:checked`).val())){
+			// 	console.log(`Food! Treat Yourself!`);
+			// } else if (($(`#activity:checked`).val() && $(`#chillin:checked`).val())){
+			// 	console.log(`Activity! Chillin!`);
+			// } else if (($(`#activity:checked`).val() && $(`#date:checked`).val())){
+			// 	console.log(`Activity! Date!`); 
+			// }
+
+
+const foodAfford = [];
+// console.log (foodAfford);
+
+function randomIndex(foodAfford) {
+
+	const index = Math.floor(Math.random() * foodAfford.length);
+	return foodAfford[index]
+}
+
+$(document).ready(function(){
 
 	$(`form`).on(`submit`, function(event) {
-
-		// STEP ONE: Set a default behaviour for submit buttons removed.
 		event.preventDefault();
 
-		// STEP TWO: Capture/ Log the USER's selection, based on either Food/ Activity, Affordable/ Treat, Chillin/ Date. 
-		if ($(`#food:checked`).val() && $(`#affordable:checked`).val()){
-			console.log(`Food! Affordable!`);
-		} else if (($(`#food:checked`).val() && $(`#treatYourself:checked`).val())){
-			console.log(`Food! Treat Yourself!`);
-		} else if (($(`#activity:checked`).val() && $(`#chillin:checked`).val())){
-			console.log(`Activity! Chillin!`);
-		} else if (($(`#activity:checked`).val() && $(`#date:checked`).val())){
-			console.log(`Activity! Date!`); 
+		if ($(`#food:checked`).val() && $(`#affordable:checked`).val()) {
+			// console.log(`hi`)
+			for (let i = 0; i < food.length; i++) {
+				if (food[i].price === `affordable`) {
+					foodAfford.push(food[i].name);
+					// console.log(`hi`)
+				}
+			}
+
+			const foodResult = randomIndex(foodAfford);
+			console.log(foodResult);
 		}
-
-
-		// QUESTION ONE: USER has to select from Question One. FOOD or ACTIVITY. 
-		// USER selects/ on click FOOD... ASK the USER to select if it will be AFFORDABLE or EXPENSIVE.
-
-		// QUESTION ONE(A): IF the USER selects AFFORDABLE. RETURN a random result from an ARRAY that holds AFFORDABLE food places.
-
-		// QUESTION ONE(B): IF the USER selects EXPENSIVE. RETURN a random result from an ARRAY that holds EXPENSIVE food places.
-
-		// QUESTION ONE: USER has to select from Question One. FOOD or ACTIVITY. 
-		// USER selects/ on click FOOD... ASK the USER to select if it will be AFFORDABLE or EXPENSIVE.
-
-		// STEP THREE(D): IF the USER selects AFFORDABLE. RETURN a random result from an ARRAY that holds AFFORDABLE food places.
-
-
-		// STEP: Set and make sure the USER selects at least one choice for each question.
-		// & Inform the USER that a selection must be made in order to get a return in result.
-
-
-		
 	})
-});
+})
