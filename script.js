@@ -102,23 +102,6 @@ const activity = [
 		type: "date",
 	},
 ]
-// Set all global varibles/ functions here before document.ready fires.
-
-// Set a global varible for the USER's 
-// const youChoose = {};
-
-// youChoose.getResults = (food) => {
-// 	console.log(food);
-
-// 	for (let i = 0; i <food.length; i++) {
-// 		$(`.result`)
-// 			.append(`<p>${food[i].price}</p>`);
-// 	}
-// }
-
-
-
-
 		// Set a default behaviour for submit buttons removed.
 
 		// Capture/ Log the USER's selection. USER will have to choose a combination of: Food/ Activity OR Affordable/ Treat OR Chillin/ Date. 
@@ -132,13 +115,21 @@ const activity = [
 			// 	console.log(`Activity! Date!`); 
 			// }
 
-// Global variable created for foodAfford. (This is a place to store the FOOD, AFFORDABLE selections)
+// Global variable created for appropriate choices. (This is a place to store the selections based on USER choice selection)
 const foodAfford = [];
+const foodExpensive = [];
+
 // Global function created for foodAfford. (This function is created so we can grab the foodAfford's new array and generate a random index value so it can be returned to the user.)
 function randomIndex(foodAfford) {
 
 	const index = Math.floor(Math.random() * foodAfford.length);
 	return foodAfford[index]
+}
+
+function randomIndex(foodExpensive) {
+
+	const index = Math.floor(Math.random() * foodExpensive.length);
+	return foodExpensive[index]
 }
 
 $(document).ready(function(){
@@ -147,7 +138,7 @@ $(document).ready(function(){
 		// Set a preventDefault behaviour for submit buttons.
 		event.preventDefault();
 
-		// IF FOOD && AFFORDABLE are checked...
+		// IF, FOOD && AFFORDABLE are checked. Do the following...
 		if ($(`#food:checked`).val() && $(`#affordable:checked`).val()) {
 			// RUN a FOR loop-de-loop for the FOOD list...
 			for (let i = 0; i < food.length; i++) {
@@ -160,7 +151,24 @@ $(document).ready(function(){
 			// Create a variable and make sure it holds onto whatever FUNCTION it produces from randomIndex(foodAfford).
 			const foodResult = randomIndex(foodAfford);
 			// DISPLAY/ RETURN the random results from the array to: (div/headings/paragraph etc.)
-			// console.log(foodResult);
-		};
+			// NOTE: Log console.log here to do tests/ debug
+			console.log(foodResult);
+		
+		// ELSE IF, FOOD && EXPENSIVE are checked. Do the following...
+		} else if ($(`#food:checked`).val() && $(`#expensive:checked`).val()) {
+			for (let i = 0; i < food.length; i++) {
+				if (food[i].price === `expensive`) {
+					foodExpensive.push(food[i].name);
+				}
+			}
+			const foodResult = randomIndex(foodExpensive);
+			console.log(foodResult);
+		}
 	})
 })
+
+//  else if ($(`#food:checked`).val() && $(`#expensive:checked`).val()) {
+// 	if (food[i].price === `expensive`) {
+// 		foodExpensive.push(food[i].name)
+// 	}
+// }
