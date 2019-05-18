@@ -138,7 +138,6 @@ function randomIndex(foodAfford) {
 	const index = Math.floor(Math.random() * foodAfford.length);
 	return foodAfford[index]
 }
-
 function randomIndex(foodExpensive) {
 	const index = Math.floor(Math.random() * foodExpensive.length);
 	return foodExpensive[index]
@@ -147,12 +146,11 @@ function randomIndex(activityChillin) {
 	const index = Math.floor(Math.random() * activityChillin.length);
 	return activityChillin[index]
 }
-
 function randomIndex(activityDate) {
 	const index = Math.floor(Math.random() * activityDate.length);
 	return activityDate[index]
 }
-
+// Function to be used to display/ ammend random results to each question submitted.
 function displayResult(choice) {
 	$(`.results`).html(
 		`<div class="wrapper main">
@@ -165,11 +163,15 @@ function displayResult(choice) {
 				</a
 			</div>
 		</div>`
-	)``
+	)
+
+	$(`.resetButton`).on(`click`, () => {
+		// Note: location.reload(true) had to be used to fresh the page. If possible relook into other methods like .remove .empty...
+		location.reload(true);
+	})
 };
 
 $(document).ready(function() {
-
 	// This set of functions are set to make Question One appear on click from the Start button. 
 	$(`.heroButton`).on(`click`, function (event) {
 		event.preventDefault();
@@ -195,14 +197,12 @@ $(document).ready(function() {
 		$(`.firstSubmit`).on(`click`, function (event) {
 			event.preventDefault();
 
-			// Prevent the USER from submiting more than once on submit, after selecting FOOD/ ACTIVITY.
 			$(`.firstSubmit`).attr(`disabled`, true);
 			$(`html, body`).animate({
 				scrollTop: $(`#subQuestion`).offset().top
 			}, 1000);
 
 			if ($(`#food:checked`).val()) {
-
 				$(`.questionsTwo`).html(
 				`<h2>Hurry! I'm Hungry!</h2>
 					<p>Choose another!</p>
@@ -212,11 +212,10 @@ $(document).ready(function() {
 					<input id="expensive" name="affordableTreat" type="radio" value="expensive" required>
 					<label for="expensive">Treat Yourself! Duh!</label>
 				</div>
-					<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!">`
+					<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!" required>`
 				);
 
 			} else if ($(`#activity:checked`).val()) {
-
 				$(`.questionsTwo`).html(
 					`<h2>Sweet! Let's go!</h2>
 					<p>Almost there!</p>
@@ -226,7 +225,7 @@ $(document).ready(function() {
 						<input id="date" name="chillinDate" type="radio" value="date" required>
 						<label for="date">Date? Ouuu.</label>
 					</div>
-						<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!">`
+						<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!" required>`
 				);
 			}
 		})
@@ -234,17 +233,18 @@ $(document).ready(function() {
 
 	// This set of functions are set to generate a random index value from the arrays, based on USER selection.
 	$(`form`).on(`submit`, function(event) {
-		// Set a preventDefault behaviour for submit buttons.
+		// preventDefault behaviour set for submit buttons.
 		event.preventDefault();
+		
 		// Prevent the USER from submiting more than once on submit for Questions after selecting FOOD/ AFFORDABLE.
 		$(`.subSubmit`).attr(`disabled`, true);
+		// Scroll to element without jQuery plugin.
 		$(`html, body`).animate({
 			scrollTop: $(`#results`).offset().top
 		}, 1000);
 
 		// IF, FOOD && AFFORDABLE are checked. Do the following...
 		if ($(`#food:checked`).val() && $(`#affordable:checked`).val()) {
-
 			// RUN a FOR loop-de-loop for the FOOD list...
 			for (let i = 0; i < food.length; i++) {
 				// IF... FOOD price is equal to the STRING `affordable`...
@@ -253,19 +253,11 @@ $(document).ready(function() {
 					foodAfford.push(food[i].name);
 				}
 			}
-
 			// Create a variable and make sure it holds onto whatever FUNCTION it produces from randomIndex(foodAfford).
 			foodResult = randomIndex(foodAfford);
 
 			// DISPLAY/ RETURN the random results from the array to: (div/headings/paragraph etc.) // NOTE: Log console.log here to do tests/ debug
-			console.log(foodResult);
 			displayResult(foodResult);
-
-			$(`.resetButton`).on(`click`, () => {
-				$(`form`).trigger(`reset`);
-				$(`.firstSubmit`).attr(`disabled`, false);
-				// $(`form`).trigger(`reset`).remove();
-			})
 			
 		// ELSE IF, FOOD && EXPENSIVE are checked. Do the following...
 		} else if ($(`#food:checked`).val() && $(`#expensive:checked`).val())	{
@@ -277,7 +269,6 @@ $(document).ready(function() {
 			}
 
 			foodResult = randomIndex(foodExpensive);
-			console.log(foodResult);
 			displayResult(foodResult);
 		}
 
@@ -291,7 +282,6 @@ $(document).ready(function() {
 			}
 
 			activityResult = randomIndex(activityChillin);
-			console.log(activityResult);
 			displayResult(activityResult);
 
 			// ELSE IF, ACTIVITY && DATE are checked. Do the following...
@@ -304,9 +294,31 @@ $(document).ready(function() {
 			}
 
 			activityResult = randomIndex(activityDate);
-			console.log(activityResult);
 			displayResult(activityResult);
 		}
-	})
+	});
 })
 
+// $(function () {
+
+// 	$('button').on('click', function (e) {
+// 		e.preventDefault();
+
+// 		$('form').trigger("reset");
+// 		$('.finalCocktailDescision').empty();
+// 		$('.finishForm').empty();
+
+// 	});
+// });
+
+
+			// $(`.resetButton`).on(`click`, () => {
+			// 	$(`form`).trigger(`reset`).remove();
+			// 	$(`input[type="radio"]`).attr(`checked`, false);
+			// })
+
+			// $(`button`).on(`click`, function (event) {
+			// 	event.preventDefault();
+			// 	// $(`form`).trigger(`reset`).remove();
+			// 	$(`input[type="radio"]`).checked = false;
+			// })
