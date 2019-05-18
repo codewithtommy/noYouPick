@@ -223,12 +223,23 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .heroButton,
-.secondButton,
-.subSubmit {
+.firstSubmit,
+.subSubmit,
+.resetButton {
   background: #FFB64D;
   border-radius: 10px;
   border: transparent;
   padding: 2.5% 5%;
+}
+
+.firstSubmit,
+.subSubmit,
+.resetButton {
+  -webkit-box-shadow: 2px 2px 5px #000000;
+          box-shadow: 2px 2px 5px #000000;
+  font-size: 0.8rem;
+  margin-top: 10%;
+  text-transform: uppercase;
 }
 
 .heroButton {
@@ -238,13 +249,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   text-transform: uppercase;
 }
 
-.secondButton,
+.firstSubmit,
 .subSubmit {
-  -webkit-box-shadow: 2px 2px 5px #000000;
-          box-shadow: 2px 2px 5px #000000;
-  font-size: 0.8rem;
-  margin-top: 10%;
-  text-transform: uppercase;
+  margin-bottom: 7.5%;
 }
 
 form {
@@ -252,7 +259,6 @@ form {
   border-radius: 20px;
   -webkit-box-shadow: 2px 2px 15px #000000;
           box-shadow: 2px 2px 15px #000000;
-  padding: 5%;
 }
 
 label {
@@ -314,6 +320,10 @@ header .heroContent p {
 .questionsOne,
 .questionsTwo {
   text-align: center;
+}
+
+.questionsOne p {
+  padding: 0% 15%;
 }
 
 .questionsTwoA,

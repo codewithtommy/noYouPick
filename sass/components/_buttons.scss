@@ -1,8 +1,18 @@
 .heroButton,
-.secondButton,
-.subSubmit {
+.firstSubmit,
+.subSubmit,
+.resetButton {
   @include buttonProp ($colComp, 10px, transparent);
   padding: 2.5% 5%;
+}
+
+.firstSubmit,
+.subSubmit,
+.resetButton {
+  box-shadow: 2px 2px 5px $blk;
+  font-size: 0.8rem;
+  margin-top: 10%;
+  text-transform: uppercase;
 }
 
 .heroButton {
@@ -11,10 +21,7 @@
   text-transform: uppercase;
 }
 
-.secondButton,
+.firstSubmit,
 .subSubmit {
-  box-shadow: 2px 2px 5px $blk;
-  font-size: 0.8rem;
-  margin-top: 10%;
-  text-transform: uppercase;
+  margin-bottom: 7.5%;
 }

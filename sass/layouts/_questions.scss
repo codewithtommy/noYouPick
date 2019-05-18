@@ -8,6 +8,10 @@
   text-align: center;
 }
 
+.questionsOne p {
+  padding: 0% 15%;
+}
+
 .questionsTwoA,
 .questionsTwoB {
   @include flexCenter (null, center, flex, column, null);
