@@ -149,16 +149,28 @@ function randomIndex(activityDate) {
 	return activityDate[index]
 }
 
+const results = function (choice) {
+	$(`.results`).html(
+		`<div class="wrapper main">
+			<div class="resultsContent">
+				<h2>Here You Go!</h2>
+				<p>Looks like it's going to be...</p>
+				<p class="resultText">${choice}</p>
+			</div>
+		</div>`
+	);
+}
+
 $(document).ready(function(){
 
-	$(`form`).one(`submit`, function(event) {
+	$(`.secondButton`).on(`click`, function(event) {
 		event.preventDefault();
 
 		// IF, FOOD is checked. Bring up/ append this:
 		if ($(`#food:checked`).val()) {
 
 			// Prevent the USER from submiting more than once on submit, after selecting FOOD/ ACTIVITY.
-			document.getElementById(`mainSubmit`).disabled = true;
+			$(`.secondButton`).attr(`disabled`, true);
 
 			$(`.questionsTwo`).html(
 				`<section class="questionsTwoA" id="twoA">
@@ -175,7 +187,7 @@ $(document).ready(function(){
 			
 		} else if ($(`#activity:checked`).val()) {
 
-			document.getElementById(`mainSubmit`).disabled = true;
+			$(`.secondButton`).attr(`disabled`, true);
 
 			$(`.questionsTwo`).html(
 				`<section class="questionsTwoB" id="twoB">
@@ -213,18 +225,11 @@ $(document).ready(function(){
 			
 			// Create a variable and make sure it holds onto whatever FUNCTION it produces from randomIndex(foodAfford).
 			const foodResult = randomIndex(foodAfford);
+
 			// DISPLAY/ RETURN the random results from the array to: (div/headings/paragraph etc.)
 			// NOTE: Log console.log here to do tests/ debug
 			// console.log(foodResult);
-			$(`.results`).html(
-				`<div class="wrapper main">
-					<div class="resultsContent">
-						<h2>Here You Go!</h2>
-						<p>Looks like it's going to be...</p>
-						<p class="resultText">${foodResult}</p>
-					</div>
-				</div>`
-			);
+			results(foodResult);
 		
 		// ELSE IF, FOOD && EXPENSIVE are checked. Do the following...
 		} else if ($(`#food:checked`).val() && $(`#expensive:checked`).val())
@@ -238,15 +243,7 @@ $(document).ready(function(){
 			}
 			const foodResult = randomIndex(foodExpensive);
 			// console.log(foodResult);
-			$(`.results`).html(
-				`<div class="wrapper main">
-					<div class="resultsContent">
-						<h2>Here You Go!</h2>
-						<p>Looks like it's going to be...</p>
-						<p class="resultText">${foodResult}</p>
-					</div>
-				</div>`
-			);
+			results(foodResult);
 		}
 
 		// IF, ACTIVITY && CHILLIN are checked. Do the following...
@@ -262,21 +259,13 @@ $(document).ready(function(){
 
 			const activityResult = randomIndex(activityChillin);
 			// console.log(activityResult);
-			$(`.results`).html(
-				`<div class="wrapper main">
-					<div class="resultsContent">
-						<h2>Here You Go!</h2>
-						<p>Looks like it's going to be...</p>
-						<p class="resultText">${activityResult}</p>
-					</div>
-				</div>`
-			);
+			results(activityResult);
 
 			// ELSE IF, ACTIVITY && DATE are checked. Do the following...
 		} else if ($(`#activity:checked`).val() && $(`#date:checked`).val()) {
 
 			document.getElementById(`subSubmit`).disabled = true;
-			
+
 			for (let i = 0; i < activity.length; i++) {
 				if (activity[i].type === `date`) {
 					activityDate.push(activity[i].name);
@@ -284,15 +273,7 @@ $(document).ready(function(){
 			}
 			const activityResult = randomIndex(activityDate);
 			// console.log(activityResult);
-			$(`.results`).html(
-				`<div class="wrapper main">
-					<div class="resultsContent">
-						<h2>Here You Go!</h2>
-						<p>Looks like it's going to be...</p>
-						<p class="resultText">${activityResult}</p>
-					</div>
-				</div>`
-			);
+			results(activityResult);
 		}
 	})
 })
