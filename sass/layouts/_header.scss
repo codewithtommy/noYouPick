@@ -9,7 +9,17 @@ header {
 	}
 
 	.heroContent h1,
+	.heroContent p,
 	.heroButtonContainer {
 		text-align: center;
+	}
+
+	.heroContent p {
+		font-size: 1.15rem;
+		color: $wht;
+		letter-spacing: 2px;
+		line-height: 25px;
+		// padding: 5% 0% 10%;
+		text-shadow: 1px 1px 1px $blk;
 	}
 }

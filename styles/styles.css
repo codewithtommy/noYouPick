@@ -26,15 +26,13 @@ img {
   width: 100%;
 }
 
-p {
-  margin: 0%;
-}
-
 h1 {
   font-family: "Roboto", sans-serif;
   font-size: 7rem;
   font-weight: 700;
   color: #FFFFFF;
+  margin: 0%;
+  line-height: 150px;
   text-shadow: 5px 2px 5px #000000;
 }
 
@@ -292,8 +290,17 @@ header .wrapper {
 }
 
 header .heroContent h1,
+header .heroContent p,
 header .heroButtonContainer {
   text-align: center;
+}
+
+header .heroContent p {
+  font-size: 1.15rem;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  line-height: 25px;
+  text-shadow: 1px 1px 1px #000000;
 }
 
 .questions {

@@ -39,13 +39,11 @@ img {
 	width: 100%;
 }
 
-p {
-	margin: 0%;
-}
-
 h1 {
 	@include fontProp ($fontPrim, 7rem, 700);
 	color: $wht;
+	margin:	0%;
+	line-height: 150px;
 	text-shadow: 5px 2px 5px $blk;
 }
 

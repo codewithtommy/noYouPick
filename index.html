@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>No, You Pick!</title>
+    <!-- LINK: This is for GOOGLE FONTS! -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700|Roboto:300,400,700&display=swap" rel="stylesheet">
+    <!-- LINK: This is for FONT AWESOME ICONS! -->
+    <!-- hi. -->
+    <!-- LINK: This is for WEB APP ICON! -->
+    <!-- hi. -->
+    <!-- LINK: This is for CSS! -->
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body>
     <!-- ===================================================================================-->
     <!-- HEADER: HERO / START 
-      (H1, Hero Image, Start) -->
+      (H1, Hero Image, Start Button) -->
     <!-- ===================================================================================-->
     <header class="hero section" id="hero">
       <div class="wrapper main">
         <div class="heroContent">
           <h1>No, You Pick!</h1>
+          <p>A tiny interactive quiz for indecisiveness, when it comes to hanging out for food, activities or dates! </p>
           <img src="" alt="">
           <div class="heroButtonContainer">
             <a href="#question">
@@ -27,53 +34,44 @@
       </div>
     </header>
     <!-- ===================================================================================-->
-    <!-- HEADER: HERO / END -->
-    <!-- ===================================================================================-->
-    <!-- ===================================================================================-->
     <!-- SECTION: QUESTIONS MAIN / START 
-      (Choose: Food or Activity) -->
+      (This is where USER selects their choice(s).) -->
     <!-- ===================================================================================-->
     <section class="questions section" id="question">
       <div class="wrapper main">
         <form class="">
-          <!-- QUESTION ONE: FOOD OR ACTIVITY. -->
+          <!-- QUESTION ONE: FOOD/ ACTIVITY. -->
           <section class="questionsOne">
             <h2>Choose Your Path!</h2>
             <div class="inputLabel">
-              <!-- Left Side: FOOD Selection -->
+          <!-- Left: FOOD Choice -->
               <input id="food" name="foodActivity" type="radio" value="food">
               <label for="food">Food</label>
-              <!-- Right Side: ACTIVITY Selection-->
+          <!-- Right: ACTIVITY Choice-->
               <input id="activity" name="foodActivity" type="radio" value="activity">
               <label for="activity">Activity</label>
             </div>
-            <a href="#question">
+          <!-- Bottom: BUTTON for Question ONE-->
+            <a href="#subQuestion">
               <button class="secondButton">Send It!</button>
             </a>
           </section>
+          <!-- QUESTION TWO: -->
+          <!-- AFFORD/ TREAT YOURSELF/ CHILLIN/ DATE -->
           <section class="questionsTwo" id="subQuestion">
             <section class="questionsTwoA" id="twoA"></section>
-            <!-- QUESTION TWO A: FOOD: AFFORDABLE/ FOOD: TREAT YOURSELF. -->
-            <!-- NOTE: AMMEND this section based on selection. -->
+            <!-- NOTE: This is the section where choice: Affordable/ Treat Yourself will be ammended. -->
             <section class="questionsTwoB" id="twoB"></section>
-            <!-- QUESTION TWO B: ACTIVITY: CHILLIN/ ACTIVITY: DATE-->
-            <!-- NOTE: AMMEND this section based on selection. -->
+            <!-- NOTE: This is the section where choices: Chillin'/ Date will be ammended. -->
           </section>
         </form>
       </div>
     </section>
     <!-- ===================================================================================-->
-    <!-- SECTION: QUESTION MAIN / END -->
+    <!-- SECTION: RESULTS / START 
+      (H3, Results)-->
     <!-- ===================================================================================-->
-    <!-- ===================================================================================-->
-    <!-- SECTION: RESULT / START 
-      (H3, Result)-->
-    <!-- ===================================================================================-->
-    <section class="results section" id="results">
-    </section>
-    <!-- ===================================================================================-->
-    <!-- SECTION: RESULT RIGHT / END -->
-    <!-- ===================================================================================-->
+    <section class="results section" id="results"></section>
     <!-- ===================================================================================-->
     <!-- FOOTER: COPYRIGHT / START 
       (Credits/ Copyright/ Twitter/ Instagram) -->
@@ -86,15 +84,13 @@
       </div>
     </footer>
     <!-- ===================================================================================-->
-    <!-- FOOTER: COPYRIGHT / END -->
-    <!-- ===================================================================================-->
-    <!-- ===================================================================================-->
     <!-- JQUERY/ JAVASCRIPT: START -->
     <!-- ===================================================================================-->
+    <!-- SCRIPT: This is for JQUERY CDN (3.4.1) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- SCRIPT: This is for JQUERY/ JAVASCRIPT SCRIPTS! -->
     <script src="./scripts/script.js"></script>
-    <!-- ===================================================================================-->
-    <!-- JQUERY/ JAVASCRIPT: END -->
-    <!-- ===================================================================================-->
+    <!-- SCRIPT: This is for ANIMATE ON SCROLL! -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>
