@@ -1,9 +1,20 @@
-.heroButton {
-  background: $colComp;
-  border-radius: 10px;
-  box-shadow: 2px 2px 15px $blk;
-  color: $blk;
-  border: transparent;
-  font-size: 1.25rem;
+.heroButton,
+.secondButton,
+.subSubmit {
+  @include buttonProp ($colComp, 10px, transparent);
   padding: 2.5% 5%;
+}
+
+.heroButton {
+  box-shadow: 2px 2px 15px $blk;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.secondButton,
+.subSubmit {
+  box-shadow: 2px 2px 5px $blk;
+  font-size: 0.8rem;
+  margin-top: 10%;
+  text-transform: uppercase;
 }

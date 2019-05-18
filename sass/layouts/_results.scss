@@ -4,8 +4,10 @@
 }
 
 .resultsContent {
+  @include flexCenter (null, center, flex, column, null);
   background: $wht;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 2px 2px 15px $blk;
   padding: 5%;
+  text-align: center;
 }

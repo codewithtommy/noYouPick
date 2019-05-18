@@ -14,13 +14,15 @@
       (H1, Hero Image, Start) -->
     <!-- ===================================================================================-->
     <header class="hero section" id="hero">
-      <div class="wrapper">
-        <h1>No, You Pick!</h1>
-        <img src="" alt="">
-        <div class="heroButtonContainer">
-          <a href="#question" >
-            <button class="heroButton">Let's Get Started!</button>
-          </a>
+      <div class="wrapper main">
+        <div class="heroContent">
+          <h1>No, You Pick!</h1>
+          <img src="" alt="">
+          <div class="heroButtonContainer">
+            <a href="#question">
+              <button class="heroButton">Start</button>
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -37,21 +39,23 @@
           <!-- QUESTION ONE: FOOD OR ACTIVITY. -->
           <section class="questionsOne">
             <h2>Choose Your Path!</h2>
-            <div class="flexAlign">
+            <div class="inputLabel">
               <!-- Left Side: FOOD Selection -->
               <input id="food" name="foodActivity" type="radio" value="food">
               <label for="food">Food</label>
               <!-- Right Side: ACTIVITY Selection-->
               <input id="activity" name="foodActivity" type="radio" value="activity">
               <label for="activity">Activity</label>
-              <a href="#question">
-                <button class="secondButton">Let's Get Started!</button>
-              </a>
             </div>
+            <a href="#question">
+              <button class="secondButton">Send It!</button>
+            </a>
           </section>
           <section class="questionsTwo" id="subQuestion">
+            <section class="questionsTwoA" id="twoA"></section>
             <!-- QUESTION TWO A: FOOD: AFFORDABLE/ FOOD: TREAT YOURSELF. -->
             <!-- NOTE: AMMEND this section based on selection. -->
+            <section class="questionsTwoB" id="twoB"></section>
             <!-- QUESTION TWO B: ACTIVITY: CHILLIN/ ACTIVITY: DATE-->
             <!-- NOTE: AMMEND this section based on selection. -->
           </section>

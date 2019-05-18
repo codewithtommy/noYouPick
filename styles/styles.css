@@ -1,4 +1,5 @@
 html {
+  font-family: "Raleway", sans-serif;
   font-size: 125%;
   scroll-behavior: smooth;
 }
@@ -21,7 +22,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0% 25% 7.5%;
+  padding: 0% 25% 2.5%;
   width: 100%;
 }
 
@@ -30,10 +31,18 @@ p {
 }
 
 h1 {
-  font-size: 6.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 7rem;
   font-weight: 700;
   color: #FFFFFF;
   text-shadow: 5px 2px 5px #000000;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
@@ -215,15 +224,41 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
-.heroButton {
+.heroButton,
+.secondButton,
+.subSubmit {
   background: #FFB64D;
   border-radius: 10px;
+  border: transparent;
+  padding: 2.5% 5%;
+}
+
+.heroButton {
   -webkit-box-shadow: 2px 2px 15px #000000;
           box-shadow: 2px 2px 15px #000000;
-  color: #000000;
-  border: transparent;
   font-size: 1.25rem;
-  padding: 2.5% 5%;
+  text-transform: uppercase;
+}
+
+.secondButton,
+.subSubmit {
+  -webkit-box-shadow: 2px 2px 5px #000000;
+          box-shadow: 2px 2px 5px #000000;
+  font-size: 0.8rem;
+  margin-top: 10%;
+  text-transform: uppercase;
+}
+
+form {
+  background: #FAFAFA;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 15px #000000;
+          box-shadow: 2px 2px 15px #000000;
+  padding: 5%;
+}
+
+label {
+  padding: 0% 2.5%;
 }
 
 footer {
@@ -252,6 +287,15 @@ header {
   max-width: 100%;
 }
 
+header .wrapper {
+  margin-bottom: 0%;
+}
+
+header .heroContent h1,
+header .heroButtonContainer {
+  text-align: center;
+}
+
 .questions {
   background: -webkit-gradient(linear, left top, left bottom, from(#55A4F1), to(#FFD54C));
   background: linear-gradient(#55A4F1, #FFD54C);
@@ -260,12 +304,23 @@ header {
   display: flex;
 }
 
-form {
-  background: #FAFAFA;
-  border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 15px #000000;
-          box-shadow: 2px 2px 15px #000000;
-  padding: 5%;
+.questionsOne,
+.questionsTwo {
+  text-align: center;
+}
+
+.questionsTwoA,
+.questionsTwoB {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .results {
@@ -277,10 +332,21 @@ form {
 }
 
 .resultsContent {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: #FFFFFF;
-  border-radius: 10px;
+  border-radius: 20px;
   -webkit-box-shadow: 2px 2px 15px #000000;
           box-shadow: 2px 2px 15px #000000;
   padding: 5%;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */

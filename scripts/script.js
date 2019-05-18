@@ -7,118 +7,118 @@
 
 const food = [
 	{
-		name: 'McDonalds',
+		name: `McDonalds`,
 		price: "affordable",
 	},
 	{
-		name: 'Popeye Louisiana Kitchen',
+		name: `Popeye's Louisiana Kitchen`,
 		price: "affordable",
 	},
 	{
-		name: 'Pizza Pizza',
+		name: `Pizza Pizza`,
 		price: "affordable",
 	},
 	{
-		name: 'Wings',
+		name: `Wings`,
 		price: "affordable", 
 	},
 	{
-		name: 'Vietnamese Pho Noodles',
+		name: `Vietnamese Pho Noodles`,
 		price: "affordable",
 	},
 	{
-		name: 'Food Court or Street Food',
+		name: `Food Court or Street Food`,
 		price: "affordable",
 	},
 	{
-		name: 'Shawarma',
+		name: `Shawarma`,
 		price: "affordable",
 	},
 	{
-		name: 'Japanese Ramen Noodle',
+		name: `Japanese Ramen Noodle`,
 		price: "expensive",
 	},
 	{
-		name: 'Seafood Boil House',
+		name: `Seafood Boil House`,
 		price: "expensive",
 	},
 	{
-		name: 'Japanese Sushi Bar',
+		name: `Japanese Sushi Bar`,
 		price: "expensive",
 	},
 	{
-		name: 'KEG Steakhouse',
+		name: `KEG Steakhouse`,
 		price: "expensive",
 	},
 	{
-		name: 'Italian Cuisine',
+		name: `Italian Cuisine`,
 		price: "expensive",
 	},
 	{
-		name: 'Korean Barbeque',
+		name: `Korean Barbeque`,
 		price: "expensive",
 	},
 	{
-		name: 'Indian Cuisine',
+		name: `Indian Cuisine`,
 		price: "expensive",
 	}
 ]
 
 const activity = [
 	{
-		name: 'Board Games',
+		name: `Board Games`,
 		type: "chillin",
 	},
 	{
-		name: 'Pool or Dart Hall',
+		name: `Pool or Dart Hall`,
 		type: "chillin",
 	},
 	{
-		name: 'Bar Hopping',
+		name: `Bar Hopping`,
 		type: "chillin",
 	},
 	{
-		name: 'Desserts',
+		name: `Desserts`,
 		type: "chillin",
 	},
 	{
-		name: 'Happy Hour Snacks',
+		name: `Happy Hour Snacks`,
 		type: "chillin",
 	},
 	{
-		name: 'Bubble Tea',
+		name: `Bubble Tea`,
 		type: "chillin",
 	},
 	{
-		name: 'Patio Sessions',
+		name: `Patio Sessions`,
 		type: "chillin",
 	},
 	{
-		name: 'Exploring Downtown',
+		name: `Exploring Downtown`,
 		type: "date",
 	},
 	{
-		name: 'Bowling',
+		name: `Bowling`,
 		type: "date",
 	},
 	{
-		name: 'Late Night Drives & Music',
+		name: `Late Night Drives & Music`,
 		type: "date",
 	},
 	{
-		name: 'Batting Cages',
+		name: `Batting Cages`,
 		type: "date",
 	},
 	{
-		name: 'Outdoor Mini Golfing',
+		name: `Outdoor Mini Golfing`,
 		type: "date",
 	},
 	{
-		name: 'Redemption Arcades',
+		name: `Redemption Arcades`,
 		type: "date",
 	},
 	{
-		name: 'Desserts',
+		name: `Desserts`,
 		type: "date",
 	}
 ]
@@ -149,17 +149,17 @@ function randomIndex(activityDate) {
 	return activityDate[index]
 }
 
-const results = function (choice) {
-	$(`.results`).html(
-		`<div class="wrapper main">
-			<div class="resultsContent">
-				<h2>Here You Go!</h2>
-				<p>Looks like it's going to be...</p>
-				<p class="resultText">${choice}</p>
-			</div>
-		</div>`
-	);
-}
+// const results = function (foodResult) {
+// 	$(`.results`).html(
+// 		`<div class="wrapper main">
+// 			<div class="resultsContent">
+// 				<h2>Here You Go!</h2>
+// 				<p>Looks like it's going to be...</p>
+// 				<p class="resultText">${foodResult}</p>
+// 			</div>
+// 		</div>`
+// 	);
+// }
 
 $(document).ready(function(){
 
@@ -173,16 +173,14 @@ $(document).ready(function(){
 			$(`.secondButton`).attr(`disabled`, true);
 
 			$(`.questionsTwo`).html(
-				`<section class="questionsTwoA" id="twoA">
-					<h2>Hurry! I'm Hungry!</h2>
-					<div class="flexAlign">
-						<input id="affordable" name="affordableTreat" type="radio" value="affordable">
-						<label for="affordable">Affordable. Heck Yes!</label>
-						<input id="expensive" name="affordableTreat" type="radio" value="expensive">
-						<label for="expensive">Treat Yourself! Go ham!</label>
-						<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!">
-					</div>
-				</section>`
+			`<h2>Hurry! I'm Hungry!</h2>
+			<div class="flexAlign">
+				<input id="affordable" name="affordableTreat" type="radio" value="affordable">
+				<label for="affordable">Affordable. Yuss!</label>
+				<input id="expensive" name="affordableTreat" type="radio" value="expensive">
+				<label for="expensive">Treat Yourself! Duh!</label>
+			</div>
+				<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!">`
 			);
 			
 		} else if ($(`#activity:checked`).val()) {
@@ -190,16 +188,14 @@ $(document).ready(function(){
 			$(`.secondButton`).attr(`disabled`, true);
 
 			$(`.questionsTwo`).html(
-				`<section class="questionsTwoB" id="twoB">
-					<h2>Sweet! Let's go!</h2>
-					<div class="flexAlign">
-						<input id="chillin" name="chillinDate" type="radio" value="chillin">
-						<label for="chillin">Chillin' Like A Villian?</label>
-						<input id="date" name="chillinDate" type="radio" value="date">
-						<label for="date">Date? Ouuu.</label>
-						<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!">
-					</div>
-				</section>`
+			`<h2>Sweet! Let's go!</h2>
+			<div class="flexAlign">
+				<input id="chillin" name="chillinDate" type="radio" value="chillin">
+				<label for="chillin">Chillin' Like A Villian?</label>
+				<input id="date" name="chillinDate" type="radio" value="date">
+				<label for="date">Date? Ouuu.</label>
+			</div>
+				<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!">`
 			);
 		}
 	})
@@ -212,7 +208,7 @@ $(document).ready(function(){
 		if ($(`#food:checked`).val() && $(`#affordable:checked`).val()) {
 
 			// Prevent the USER from submiting more than once on submit for Questions after selecting FOOD/ AFFORDABLE.
-			document.getElementById(`subSubmit`).disabled = true;
+			$(`.subSubmit`).attr(`disabled`, true);
 
 			// RUN a FOR loop-de-loop for the FOOD list...
 			for (let i = 0; i < food.length; i++) {
@@ -226,15 +222,23 @@ $(document).ready(function(){
 			// Create a variable and make sure it holds onto whatever FUNCTION it produces from randomIndex(foodAfford).
 			const foodResult = randomIndex(foodAfford);
 
-			// DISPLAY/ RETURN the random results from the array to: (div/headings/paragraph etc.)
-			// NOTE: Log console.log here to do tests/ debug
-			// console.log(foodResult);
-			results(foodResult);
+			// DISPLAY/ RETURN the random results from the array to: (div/headings/paragraph etc.) // NOTE: Log console.log here to do tests/ debug
+			console.log(foodResult);
+			// results(foodResult)
+			$(`.results`).html(
+				`<div class="wrapper main">
+					<div class="resultsContent">
+						<h2>Wooo Hoo!</h2>
+						<p>Looks like you're going to:</p>
+						<h3 class ="resultText">"${foodResult}"</h3>
+					</div>
+				</div>`
+			);
 		
 		// ELSE IF, FOOD && EXPENSIVE are checked. Do the following...
 		} else if ($(`#food:checked`).val() && $(`#expensive:checked`).val())
 
-			document.getElementById(`subSubmit`).disabled = true;
+			$(`.subSubmit`).attr(`disabled`, true);
 		{
 			for (let i = 0; i < food.length; i++) {
 				if (food[i].price === `expensive`) {
@@ -243,13 +247,13 @@ $(document).ready(function(){
 			}
 			const foodResult = randomIndex(foodExpensive);
 			// console.log(foodResult);
-			results(foodResult);
+			// results(foodResult);
 		}
 
 		// IF, ACTIVITY && CHILLIN are checked. Do the following...
 		if ($(`#activity:checked`).val() && $(`#chillin:checked`).val()) {
 
-			document.getElementById(`subSubmit`).disabled = true;
+			$(`.subSubmit`).attr(`disabled`, true);
 			
 			for (let i = 0; i < activity.length; i++) {
 				if (activity[i].type === `chillin`) {
@@ -259,12 +263,12 @@ $(document).ready(function(){
 
 			const activityResult = randomIndex(activityChillin);
 			// console.log(activityResult);
-			results(activityResult);
+			// results(activityResult);
 
 			// ELSE IF, ACTIVITY && DATE are checked. Do the following...
 		} else if ($(`#activity:checked`).val() && $(`#date:checked`).val()) {
 
-			document.getElementById(`subSubmit`).disabled = true;
+			$(`.subSubmit`).attr(`disabled`, true);
 
 			for (let i = 0; i < activity.length; i++) {
 				if (activity[i].type === `date`) {
@@ -273,7 +277,7 @@ $(document).ready(function(){
 			}
 			const activityResult = randomIndex(activityDate);
 			// console.log(activityResult);
-			results(activityResult);
+			// results(activityResult);
 		}
 	})
 })

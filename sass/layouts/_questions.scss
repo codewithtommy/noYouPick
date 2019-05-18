@@ -3,9 +3,12 @@
 	display: flex;
 }
 
-form {
-  background: $whtbg;
-  border-radius: 10px;
-  box-shadow: 2px 2px 15px $blk;
-  padding: 5%;
+.questionsOne,
+.questionsTwo {
+  text-align: center;
+}
+
+.questionsTwoA,
+.questionsTwoB {
+  @include flexCenter (null, center, flex, column, null);
 }

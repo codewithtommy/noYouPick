@@ -3,4 +3,13 @@ header {
 	display: flex;
 	height: 100vh;
 	max-width: 100%;
+
+	.wrapper {
+		margin-bottom: 0%;
+	}
+
+	.heroContent h1,
+	.heroButtonContainer {
+		text-align: center;
+	}
 }

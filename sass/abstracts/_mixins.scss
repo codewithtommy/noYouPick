@@ -39,8 +39,9 @@
 
 // LAYOUT/ POSITIONING: CENTER
 
-@mixin flexCenter ($acon, $disp, $colu, $cent) {
-  align-content: $acon;
+@mixin flexCenter ($acon, $item, $disp, $colu, $cent) {
+	align-content: $acon;
+	align-items: $item;
 	display: $disp;
 	flex-direction: $colu;
 	justify-content: $cent;
@@ -52,4 +53,12 @@
   right: $rig;
   bottom: $bot;
 	left: $lef;
+}
+
+// MISC
+
+@mixin buttonProp ($back, $brad, $bord) {
+	background: $back;
+	border-radius: $brad;
+	border: $bord;
 }
