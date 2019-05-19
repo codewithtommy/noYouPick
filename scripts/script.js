@@ -9,118 +9,134 @@
 const food = [
 	{
 		name: `McDonalds`,
-		price: "affordable",
+		price: `affordable`,
 	},
 	{
 		name: `Popeye's Louisiana Kitchen`,
-		price: "affordable",
+		price: `affordable`,
 	},
 	{
 		name: `Pizza Pizza`,
-		price: "affordable",
+		price: `affordable`,
 	},
 	{
 		name: `Wings`,
-		price: "affordable", 
+		price: `affordable`, 
+	},
+	{
+		name: `Caribbean Jerk Chicken`,
+		price: `affordable`,
 	},
 	{
 		name: `Vietnamese Pho Noodles`,
-		price: "affordable",
+		price: `affordable`,
 	},
 	{
 		name: `Food Court or Street Food`,
-		price: "affordable",
+		price: `affordable`,
 	},
 	{
 		name: `Shawarma`,
-		price: "affordable",
+		price: `affordable`,
 	},
 	{
 		name: `Japanese Ramen Noodle`,
-		price: "expensive",
+		price: `expensive`,
+	},
+	{
+		name: `Poke Bowls`,
+		price: `expensive`,
 	},
 	{
 		name: `Seafood Boil House`,
-		price: "expensive",
+		price: `expensive`,
 	},
 	{
 		name: `Japanese Sushi Bar`,
-		price: "expensive",
+		price: `expensive`,
 	},
 	{
 		name: `KEG Steakhouse`,
-		price: "expensive",
+		price: `expensive`,
 	},
 	{
 		name: `Italian Cuisine`,
-		price: "expensive",
+		price: `expensive`,
 	},
 	{
 		name: `Korean Barbeque`,
-		price: "expensive",
+		price: `expensive`,
 	},
 	{
 		name: `Indian Cuisine`,
-		price: "expensive",
+		price: `expensive`,
 	}
 ]
 
 const activity = [
 	{
 		name: `Board Games`,
-		type: "chillin",
+		type: `chillin`,
 	},
 	{
-		name: `Pool or Dart Hall`,
-		type: "chillin",
+		name: `Billiards or Dart Hall`,
+		type: `chillin`,
 	},
 	{
-		name: `Bar Hopping`,
-		type: "chillin",
+		name: `Epic Bar Hopping`,
+		type: `chillin`,
 	},
 	{
 		name: `Desserts`,
-		type: "chillin",
+		type: `chillin`,
 	},
 	{
 		name: `Happy Hour Snacks`,
-		type: "chillin",
+		type: `chillin`,
 	},
 	{
 		name: `Bubble Tea`,
-		type: "chillin",
+		type: `chillin`,
 	},
 	{
 		name: `Patio Sessions`,
-		type: "chillin",
+		type: `chillin`,
+	},
+	{
+		name: `Cafe and Lounge`,
+		type: `chillin`,
 	},
 	{
 		name: `Exploring Downtown`,
-		type: "date",
+		type: `date`,
 	},
 	{
 		name: `Bowling`,
-		type: "date",
+		type: `date`,
 	},
 	{
-		name: `Late Night Drives & Music`,
-		type: "date",
+		name: `Movies`,
+		type: `date`,
 	},
 	{
 		name: `Batting Cages`,
-		type: "date",
+		type: `date`,
 	},
 	{
 		name: `Outdoor Mini Golfing`,
-		type: "date",
+		type: `date`,
+	},
+	{
+		name: `Late Night Drives & Music`,
+		type: `date`,
 	},
 	{
 		name: `Redemption Arcades`,
-		type: "date",
+		type: `date`,
 	},
 	{
 		name: `Desserts`,
-		type: "date",
+		type: `date`,
 	}
 ]
 
