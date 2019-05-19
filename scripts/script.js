@@ -95,7 +95,7 @@ const activity = [
 		type: "chillin",
 	},
 	{
-		name: `Explore Downtown`,
+		name: `Exploring Downtown`,
 		type: "date",
 	},
 	{
@@ -155,11 +155,11 @@ function displayResult(choice) {
 	$(`.results`).html(
 		`<div class="wrapper main">
 			<div class="resultsContent">
-				<h2>Anddd...</h2>
+				<h2>Finally!</h2>
 				<p>It's going to be:</p>
 				<h3 class ="resultText">"${choice}"</h3>
 				<a href = "index.html">
-					<button class="resetButton">Poke to Reset!</button>
+					<button class="resetButton">Poke me to Reset!</button>
 				</a
 			</div>
 		</div>`
@@ -182,7 +182,7 @@ $(document).ready(function() {
 
 		$(`.questionsOne`).html (
 		`<h2>What would you like to do?</h2>
-			<p>You only get one try to discourage additional indecisiveness!</p>
+			<p>You only get one try for each question, to discourage additional indecisiveness!</p>
 		<div class="inputLabel">
 			<input id="food" name="foodActivity" type="radio" value="food" required>
 			<label for="food">Food</label>
@@ -206,8 +206,8 @@ $(document).ready(function() {
 
 		if ($(`#food:checked`).val()) {
 			$(`.questionsTwo`).html(
-				`<h2>Hurry! I'm Hungry!</h2>
-					<p>Choose another!</p>
+				`<h2>Next up!</h2>
+					<p>Just one more selection!</p>
 				<div class="flexAlign">
 					<input id="affordable" name="affordableTreat" type="radio" value="affordable" required>
 					<label for="affordable">Affordable. Yuss!</label>
@@ -219,8 +219,8 @@ $(document).ready(function() {
 
 		} else if ($(`#activity:checked`).val()) {
 			$(`.questionsTwo`).html(
-				`<h2>Sweet! Let's go!</h2>
-					<p>Almost there!</p>
+				`<h2>Bam! Great choice!</h2>
+					<p>You're almost there! One more!</p>
 					<div class="flexAlign">
 						<input id="chillin" name="chillinDate" type="radio" value="chillin" required>
 						<label for="chillin">Chillin' Like A Villian?</label>

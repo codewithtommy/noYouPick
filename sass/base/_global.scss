@@ -9,11 +9,13 @@ $colPrim: #55A4F1;
 $colSeco: #FFD54C;
 $colThrd: #FF864C;
 $colComp: #FFB64D;
+
 $wht: #FFFFFF;
 $whtbg: #FAFAFA;
 $blk: #000000;
 
 $buttonHover: #FFDCAA;
+$shadow: #C0C0C0;
 
 // LINEWEIGHT
 
@@ -51,9 +53,10 @@ h1 {
 h2 {
 	@include fontProp (null, $fontPrim, 2.25rem, 700);
 	letter-spacing: 2px;
+	text-shadow: 2.5px 2.5px 2px $shadow;
 }
 
 h3 {
-	@include fontProp (null, $fontPrim, 2.25rem, 700);
+	@include fontProp (null, $fontPrim, 2rem, 700);
 	margin: 2.5% 0% 5%;
 }

@@ -41,11 +41,12 @@ h2 {
   font-size: 2.25rem;
   font-weight: 700;
   letter-spacing: 2px;
+  text-shadow: 2.5px 2.5px 2px #C0C0C0;
 }
 
 h3 {
   font-family: "Roboto", sans-serif;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 2.5% 0% 5%;
 }
@@ -270,6 +271,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   margin-bottom: 7.5%;
 }
 
+.resetButton {
+  padding: 5%;
+}
+
 form {
   background: #FAFAFA;
   border-radius: 20px;
@@ -277,12 +282,17 @@ form {
           box-shadow: 5px 5px 15px #000000;
 }
 
-.formTwo {
-  margin: 7.5% 0%;
+form label {
+  padding: 0% 2.5%;
 }
 
-label {
-  padding: 0% 2.5%;
+form label:hover {
+  color: #55A4F1;
+  cursor: pointer;
+}
+
+.formTwo {
+  margin: 7.5% 0%;
 }
 
 footer {
@@ -344,22 +354,18 @@ header .heroContent p {
   text-align: center;
 }
 
-.questionsOne p {
-  padding: 0% 15%;
+.questionsOne p,
+.questionsTwo p,
+.results p {
+  font-style: italic;
 }
 
-.questionsTwoA,
-.questionsTwoB {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.questionsOne h2 {
+  padding: 0% 20%;
+}
+
+.questionsOne p {
+  padding: 0% 15%;
 }
 
 .results {

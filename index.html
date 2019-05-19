@@ -30,7 +30,7 @@
           <img src="" alt="">
           <div class="heroButtonContainer">
             <a href="#question">
-              <button class="heroSubmit animated fadeInUp">Start</button>
+              <button class="heroSubmit animated fadeInUp" aria-hidden="true" title="Start Quiz"><span class="sr-only visuallyHidden">Start Quiz!</span>Start</button>
             </a>
           </div>
         </div>
@@ -42,19 +42,17 @@
     <!-- ===================================================================================-->
     <section class="questions section" id="question">
       <div class="wrapper main">
-        <form class="formOne  ">
-          <!-- QUESTION ONE: FOOD/ ACTIVITY. -->
+        <!-- QUESTION ONE: FOOD/ ACTIVITY. -->
+        <form class="formOne">
           <section class="questionsOne" id="primQuestion">
+            <!-- NOTE: This is the section where choice(s): Affordable/ Treat Yourself after USER selects FOOD. -->
           </section>
         </form>
           <!-- QUESTION TWO: -->
           <!-- AFFORD/ TREAT YOURSELF/ CHILLIN/ DATE -->
         <form class="formTwo">
           <section class="questionsTwo" id="subQuestion">
-            <!-- <section class="questionsTwoA" id="twoA"></section> -->
-            <!-- NOTE: This is the section where choice: Affordable/ Treat Yourself will be ammended. -->
-            <!-- <section class="questionsTwoB" id="twoB"></section> -->
-            <!-- NOTE: This is the section where choices: Chillin'/ Date will be ammended. -->
+            <!-- NOTE: This is the section where choice(s): Chillin/ Date will be ammended, after USER selects ACTIVITY. -->
           </section>
         </form>
       </div>
@@ -63,7 +61,9 @@
     <!-- SECTION: RESULTS / START 
       (H3, Results)-->
     <!-- ===================================================================================-->
-    <section class="results section" id="results"></section>
+    <section class="results section" id="results">
+      <!-- NOTE: This is the section where result(s)will be ammended, based on what the USER chooses. -->
+    </section>
     <!-- ===================================================================================-->
     <!-- FOOTER: COPYRIGHT / START 
       (Credits/ Copyright/ Twitter/ Instagram) -->
@@ -72,6 +72,7 @@
       <div class="wrapper main">
         <div class="copyrightContent">
           <p>Copyright &copy; 2019 Tommehhhhh</p>
+          <!-- <p>HackerYou Cohort 22: ${🧙🏻‍♂️} (Cash Money Squiggly Wizard/ Wizardess)</p> -->
         </div>
       </div>
     </footer>

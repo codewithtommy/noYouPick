@@ -8,11 +8,19 @@
   text-align: center;
 }
 
-.questionsOne p {
-  padding: 0% 15%;
+.questionsOne p,
+.questionsTwo p,
+.results p {
+  font-style: italic;
 }
 
-.questionsTwoA,
-.questionsTwoB {
-  @include flexCenter (null, center, flex, column, null);
+.questionsOne {
+
+  h2 {
+    padding: 0% 20%;
+  }
+
+  p {
+    padding: 0% 15%;
+  }
 }

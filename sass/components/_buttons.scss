@@ -1,3 +1,4 @@
+// All buttons set with a hovering effect.
 .heroSubmit,
 .firstSubmit,
 .subSubmit,
@@ -7,11 +8,11 @@
 
   &:hover {
     background: $buttonHover;
-    // box-shadow: inset 1.5px 1.5px 2px $blk;
     transition: all ease 1s;
   }
 }
 
+// All buttons except for HERO/ HOME button:
 .firstSubmit,
 .subSubmit,
 .resetButton {
@@ -30,4 +31,8 @@
 .firstSubmit,
 .subSubmit {
   margin-bottom: 7.5%;
+}
+
+.resetButton {
+  padding: 5%;
 }
