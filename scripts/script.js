@@ -155,10 +155,10 @@ function displayResult(choice) {
 	$(`.results`).html(
 		`<div class="wrapper main">
 			<div class="resultsContent">
-				<h2>Wooo Hoo!</h2>
+				<h2>Anddd...</h2>
 				<p>It's going to be:</p>
 				<h3 class ="resultText">"${choice}"</h3>
-				<a href = "#hero">
+				<a href = "index.html">
 					<button class="resetButton">Poke to Reset!</button>
 				</a
 			</div>
@@ -181,7 +181,7 @@ $(document).ready(function() {
 		}, 1000);
 
 		$(`.questionsOne`).html (
-		`<h2>Choose Your Path!</h2>
+		`<h2>What would you like to do?</h2>
 			<p>You only get one try to discourage additional indecisiveness!</p>
 		<div class="inputLabel">
 			<input id="food" name="foodActivity" type="radio" value="food" required>
@@ -199,6 +199,7 @@ $(document).ready(function() {
 		event.preventDefault();
 
 		$(`.firstSubmit`).attr(`disabled`, true);
+		$(`input`).attr(`disabled`, true);
 		$(`html, body`).animate({
 			scrollTop: $(`#subQuestion`).offset().top
 		}, 1000);
@@ -236,8 +237,9 @@ $(document).ready(function() {
 		// preventDefault behaviour set for submit buttons.
 		event.preventDefault();
 		
-		// Prevent the USER from submiting more than once on submit for Questions after selecting FOOD/ AFFORDABLE.
+		// Disables input reselection and multiple submissions on submit.
 		$(`.subSubmit`).attr(`disabled`, true);
+		$(`input`).attr(`disabled`, true);
 		// Scroll to element without jQuery plugin.
 		$(`html, body`).animate({
 			scrollTop: $(`#results`).offset().top
@@ -297,7 +299,3 @@ $(document).ready(function() {
 		}
 	});
 })
-
-AOS.init({
-	duration: 1000
-});

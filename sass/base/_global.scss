@@ -13,7 +13,7 @@ $wht: #FFFFFF;
 $whtbg: #FAFAFA;
 $blk: #000000;
 
-$buttonHover: #FFC777;
+$buttonHover: #FFDCAA;
 
 // LINEWEIGHT
 
@@ -42,19 +42,18 @@ img {
 }
 
 h1 {
-	@include fontProp ($fontPrim, 7rem, 700);
-	color: $wht;
+	@include fontProp ($wht, $fontPrim, 7rem, 700);
 	margin:	0%;
 	line-height: 150px;
-	text-shadow: 5px 2px 5px $blk;
+	text-shadow: 5px 2px 10px $blk;
 }
 
 h2 {
-	@include fontProp ($fontPrim, 2.25rem, 700);
+	@include fontProp (null, $fontPrim, 2.25rem, 700);
 	letter-spacing: 2px;
 }
 
 h3 {
-	@include fontProp ($fontPrim, 2.5rem, 700);
-	margin: 0%;
+	@include fontProp (null, $fontPrim, 2.25rem, 700);
+	margin: 2.5% 0% 5%;
 }

@@ -1,5 +1,6 @@
 header {
-  background: linear-gradient($colPrim, $colPrim);
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(85, 164, 241, 1)), url(/assets/heroTorontoOpti.jpg) no-repeat fixed;
+	background-size: cover;
 	display: flex;
 	height: 100vh;
 	max-width: 100%;
@@ -15,11 +16,10 @@ header {
 	}
 
 	.heroContent p {
-		font-size: 1.15rem;
-		color: $wht;
+		@include fontProp ($wht, null, 1.15rem, null);
 		letter-spacing: 2px;
 		line-height: 25px;
-		// padding: 5% 0% 10%;
+		margin: 5% 0%;
 		text-shadow: 1px 1px 1px $blk;
 	}
 }

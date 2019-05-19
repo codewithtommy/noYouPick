@@ -26,7 +26,8 @@
 
 // FONTS
 
-@mixin fontProp ($fFamily, $fSize, $fWeight) {
+@mixin fontProp ($col, $fFamily, $fSize, $fWeight) {
+	color: $col;
   font-family: $fFamily;
   font-size: $fSize;
   font-weight: $fWeight;

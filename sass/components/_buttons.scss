@@ -7,9 +7,8 @@
 
   &:hover {
     background: $buttonHover;
-    color: $wht;
-    box-shadow: inset 1px 1px 2px $blk;
-    text-shadow: 2px 2px 2px $blk;
+    // box-shadow: inset 1.5px 1.5px 2px $blk;
+    transition: all ease 1s;
   }
 }
 
@@ -18,7 +17,7 @@
 .resetButton {
   box-shadow: 2px 2px 5px $blk;
   font-size: 0.8rem;
-  margin-top: 10%;
+  margin-top: 5%;
   text-transform: uppercase;
 }
 

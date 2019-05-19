@@ -27,13 +27,13 @@ img {
 }
 
 h1 {
+  color: #FFFFFF;
   font-family: "Roboto", sans-serif;
   font-size: 7rem;
   font-weight: 700;
-  color: #FFFFFF;
   margin: 0%;
   line-height: 150px;
-  text-shadow: 5px 2px 5px #000000;
+  text-shadow: 5px 2px 10px #000000;
 }
 
 h2 {
@@ -45,9 +45,9 @@ h2 {
 
 h3 {
   font-family: "Roboto", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 700;
-  margin: 0%;
+  margin: 2.5% 0% 5%;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
@@ -243,11 +243,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 .firstSubmit:hover,
 .subSubmit:hover,
 .resetButton:hover {
-  background: #FFC777;
-  color: #FFFFFF;
-  -webkit-box-shadow: inset 1px 1px 2px #000000;
-          box-shadow: inset 1px 1px 2px #000000;
-  text-shadow: 2px 2px 2px #000000;
+  background: #FFDCAA;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
 }
 
 .firstSubmit,
@@ -256,7 +254,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-shadow: 2px 2px 5px #000000;
           box-shadow: 2px 2px 5px #000000;
   font-size: 0.8rem;
-  margin-top: 10%;
+  margin-top: 5%;
   text-transform: uppercase;
 }
 
@@ -304,8 +302,9 @@ footer p {
 }
 
 header {
-  background: -webkit-gradient(linear, left top, left bottom, from(#55A4F1), to(#55A4F1));
-  background: linear-gradient(#55A4F1, #55A4F1);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#55a4f1)), url(/assets/heroTorontoOpti.jpg) no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0), #55a4f1), url(/assets/heroTorontoOpti.jpg) no-repeat fixed;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -324,10 +323,11 @@ header .heroButtonContainer {
 }
 
 header .heroContent p {
-  font-size: 1.15rem;
   color: #FFFFFF;
+  font-size: 1.15rem;
   letter-spacing: 2px;
   line-height: 25px;
+  margin: 5% 0%;
   text-shadow: 1px 1px 1px #000000;
 }
 
