@@ -175,7 +175,7 @@ function displayResult(choice) {
 				<p>It's going to be:</p>
 				<h3 class ="resultText">"${choice}"</h3>
 				<a href = "index.html">
-					<button class="resetButton">Poke me to Reset!</button>
+					<button class="resetButton" aria-hidden="true" title="Reset Button!"><span class="sr-only visuallyHidden">Start Quiz!</span>Poke me to Reset!</button>
 				</a
 			</div>
 		</div>`
@@ -205,7 +205,7 @@ $(document).ready(function() {
 			<input id="activity" name="foodActivity" type="radio" value="activity" required>
 			<label for="activity">Activity</label>
 		</div>
-		<input id="firstSubmit" class="firstSubmit" name="" type="submit" value="Next!" required>`
+		<input id="firstSubmit" class="firstSubmit" type="submit" value="Next!" aria-hidden="true" title="Submit!" required>`
 		);
 
 	})
@@ -230,7 +230,7 @@ $(document).ready(function() {
 					<input id="expensive" name="affordableTreat" type="radio" value="expensive" required>
 					<label for="expensive">Treat Yourself! Duh!</label>
 				</div>
-					<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!" required>`
+					<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!" aria-hidden="true" title="Submit!" required>`
 			);
 
 		} else if ($(`#activity:checked`).val()) {
@@ -243,7 +243,7 @@ $(document).ready(function() {
 						<input id="date" name="chillinDate" type="radio" value="date" required>
 						<label for="date">Date? Ouuu.</label>
 					</div>
-						<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!" required>`
+						<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!" aria-hidden="true" title="Submit!" required>`
 			);
 		}
 	})

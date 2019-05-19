@@ -1,5 +1,5 @@
 header {
-	background: linear-gradient(rgba(0, 0, 0, 0), rgba(85, 164, 241, 1)), url(/assets/heroTorontoOpti.jpg) no-repeat fixed;
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(85, 164, 241, 1)), url(../assets/heroTorontoOpti.jpg) no-repeat fixed;
 	background-size: cover;
 	display: flex;
 	height: 100vh;
@@ -8,19 +8,30 @@ header {
 	.wrapper {
 		margin-bottom: 0%;
 	}
-
-	.heroContent h1,
-	.heroContent p,
-	.heroButtonContainer {
+	
+	.heroContent {
 		text-align: center;
+
+		i {
+			@include fontProp ($colComp, null, 7rem, null);
+			text-shadow: 5px 2px 10px $blk;
+		}
+
+		p {
+			@include fontProp ($wht, null, 1.15rem, null);
+			letter-spacing: 2px;
+			line-height: 25px;
+			margin: 0% 0% 5%;
+			text-shadow: 1px 1px 1px $blk;
+		}
 	}
 
-	.heroContent p {
-		@include fontProp ($wht, null, 1.15rem, null);
-		letter-spacing: 2px;
-		line-height: 25px;
-		margin: 5% 0%;
-		text-shadow: 1px 1px 1px $blk;
+	.contact {
+		margin-top: 5%;
+
+		i {
+			@include fontProp ($colComp, null, 2.5rem, null);
+		}
 	}
 }
 
