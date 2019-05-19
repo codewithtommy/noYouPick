@@ -222,7 +222,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
-.heroButton,
+.heroSubmit,
 .firstSubmit,
 .subSubmit,
 .resetButton {
@@ -242,7 +242,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   text-transform: uppercase;
 }
 
-.heroButton {
+.heroSubmit {
   -webkit-box-shadow: 2px 2px 15px #000000;
           box-shadow: 2px 2px 15px #000000;
   font-size: 1.25rem;

@@ -130,9 +130,6 @@ const foodExpensive = [];
 const activityChillin = [];
 const activityDate = [];
 
-let foodResult;
-let activityResult;
-
 // Global function created for foodAfford. (This function is created so we can grab the foodAfford's new array and generate a random index value so it can be returned to the user.)
 function randomIndex(foodAfford) {
 	const index = Math.floor(Math.random() * foodAfford.length);
@@ -150,6 +147,9 @@ function randomIndex(activityDate) {
 	const index = Math.floor(Math.random() * activityDate.length);
 	return activityDate[index]
 }
+
+let foodResult;
+let activityResult;
 // Function to be used to display/ ammend random results to each question submitted.
 function displayResult(choice) {
 	$(`.results`).html(
@@ -164,7 +164,6 @@ function displayResult(choice) {
 			</div>
 		</div>`
 	)
-
 	$(`.resetButton`).on(`click`, () => {
 		// Note: location.reload(true) had to be used to fresh the page. If possible relook into other methods like .remove .empty...
 		location.reload(true);
@@ -173,10 +172,10 @@ function displayResult(choice) {
 
 $(document).ready(function() {
 	// This set of functions are set to make Question One appear on click from the Start button. 
-	$(`.heroButton`).on(`click`, function (event) {
+	$(`.heroSubmit`).on(`click`, function (event) {
 		event.preventDefault();
 
-		$(`.heroButton`).attr(`disabled`, true);
+		$(`.heroSubmit`).attr(`disabled`, true);
 		$(`html, body`).animate ({
 			scrollTop: $(`#primQuestion`).offset().top
 		}, 1000);
@@ -193,17 +192,19 @@ $(document).ready(function() {
 		<input id="firstSubmit" class="firstSubmit" name="" type="submit" value="Next!" required>`
 		);
 
-		// This set of functions are set to append the next set of choices based on USER selection from Question One.
-		$(`.firstSubmit`).on(`click`, function (event) {
-			event.preventDefault();
+	})
 
-			$(`.firstSubmit`).attr(`disabled`, true);
-			$(`html, body`).animate({
-				scrollTop: $(`#subQuestion`).offset().top
-			}, 1000);
+	// This set of functions are set to append the next set of choices based on USER selection from Question One.
+	$(`.formOne`).on(`submit`, function (event) {
+		event.preventDefault();
 
-			if ($(`#food:checked`).val()) {
-				$(`.questionsTwo`).html(
+		$(`.firstSubmit`).attr(`disabled`, true);
+		$(`html, body`).animate({
+			scrollTop: $(`#subQuestion`).offset().top
+		}, 1000);
+
+		if ($(`#food:checked`).val()) {
+			$(`.questionsTwo`).html(
 				`<h2>Hurry! I'm Hungry!</h2>
 					<p>Choose another!</p>
 				<div class="flexAlign">
@@ -213,11 +214,11 @@ $(document).ready(function() {
 					<label for="expensive">Treat Yourself! Duh!</label>
 				</div>
 					<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!" required>`
-				);
+			);
 
-			} else if ($(`#activity:checked`).val()) {
-				$(`.questionsTwo`).html(
-					`<h2>Sweet! Let's go!</h2>
+		} else if ($(`#activity:checked`).val()) {
+			$(`.questionsTwo`).html(
+				`<h2>Sweet! Let's go!</h2>
 					<p>Almost there!</p>
 					<div class="flexAlign">
 						<input id="chillin" name="chillinDate" type="radio" value="chillin" required>
@@ -226,13 +227,12 @@ $(document).ready(function() {
 						<label for="date">Date? Ouuu.</label>
 					</div>
 						<input id="subSubmit" class="subSubmit" name="" type="submit" value="Next!" required>`
-				);
-			}
-		})
+			);
+		}
 	})
 
 	// This set of functions are set to generate a random index value from the arrays, based on USER selection.
-	$(`form`).on(`submit`, function(event) {
+	$(`.formTwo`).on(`submit`, function(event) {
 		// preventDefault behaviour set for submit buttons.
 		event.preventDefault();
 		
@@ -255,9 +255,11 @@ $(document).ready(function() {
 			}
 			// Create a variable and make sure it holds onto whatever FUNCTION it produces from randomIndex(foodAfford).
 			foodResult = randomIndex(foodAfford);
+			console.log(randomIndex(foodAfford));
 
 			// DISPLAY/ RETURN the random results from the array to: (div/headings/paragraph etc.) // NOTE: Log console.log here to do tests/ debug
 			displayResult(foodResult);
+			console.log(foodResult);
 			
 		// ELSE IF, FOOD && EXPENSIVE are checked. Do the following...
 		} else if ($(`#food:checked`).val() && $(`#expensive:checked`).val())	{
@@ -267,7 +269,6 @@ $(document).ready(function() {
 					foodExpensive.push(food[i].name);
 				}
 			}
-
 			foodResult = randomIndex(foodExpensive);
 			displayResult(foodResult);
 		}
@@ -280,7 +281,6 @@ $(document).ready(function() {
 					activityChillin.push(activity[i].name);
 				}
 			}
-
 			activityResult = randomIndex(activityChillin);
 			displayResult(activityResult);
 
@@ -292,7 +292,6 @@ $(document).ready(function() {
 					activityDate.push(activity[i].name);
 				}
 			}
-
 			activityResult = randomIndex(activityDate);
 			displayResult(activityResult);
 		}
