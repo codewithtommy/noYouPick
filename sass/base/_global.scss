@@ -13,6 +13,8 @@ $wht: #FFFFFF;
 $whtbg: #FAFAFA;
 $blk: #000000;
 
+$buttonHover: #FFC777;
+
 // LINEWEIGHT
 
 $light: '300';
@@ -35,7 +37,7 @@ img {
 
 .wrapper {
 	@include flexCenter (null, null, flex, column, center);
-	padding: 0% 25% 2.5%;
+	padding: 0% 25%;
 	width: 100%;
 }
 
@@ -50,4 +52,9 @@ h1 {
 h2 {
 	@include fontProp ($fontPrim, 2.25rem, 700);
 	letter-spacing: 2px;
+}
+
+h3 {
+	@include fontProp ($fontPrim, 2.5rem, 700);
+	margin: 0%;
 }

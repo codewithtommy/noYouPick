@@ -22,7 +22,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0% 25% 2.5%;
+  padding: 0% 25%;
   width: 100%;
 }
 
@@ -41,6 +41,13 @@ h2 {
   font-size: 2.25rem;
   font-weight: 700;
   letter-spacing: 2px;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0%;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
@@ -232,6 +239,17 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   padding: 2.5% 5%;
 }
 
+.heroSubmit:hover,
+.firstSubmit:hover,
+.subSubmit:hover,
+.resetButton:hover {
+  background: #FFC777;
+  color: #FFFFFF;
+  -webkit-box-shadow: inset 1px 1px 2px #000000;
+          box-shadow: inset 1px 1px 2px #000000;
+  text-shadow: 2px 2px 2px #000000;
+}
+
 .firstSubmit,
 .subSubmit,
 .resetButton {
@@ -257,8 +275,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 form {
   background: #FAFAFA;
   border-radius: 20px;
-  -webkit-box-shadow: 2px 2px 15px #000000;
-          box-shadow: 2px 2px 15px #000000;
+  -webkit-box-shadow: 5px 5px 15px #000000;
+          box-shadow: 5px 5px 15px #000000;
+}
+
+.formTwo {
+  margin: 7.5% 0%;
 }
 
 label {

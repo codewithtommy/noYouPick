@@ -95,7 +95,7 @@ const activity = [
 		type: "chillin",
 	},
 	{
-		name: `Exploring Downtown`,
+		name: `Explore Downtown`,
 		type: "date",
 	},
 	{
@@ -156,7 +156,7 @@ function displayResult(choice) {
 		`<div class="wrapper main">
 			<div class="resultsContent">
 				<h2>Wooo Hoo!</h2>
-				<p>Looks like you're going to:</p>
+				<p>It's going to be:</p>
 				<h3 class ="resultText">"${choice}"</h3>
 				<a href = "#hero">
 					<button class="resetButton">Poke to Reset!</button>
@@ -298,26 +298,6 @@ $(document).ready(function() {
 	});
 })
 
-// $(function () {
-
-// 	$('button').on('click', function (e) {
-// 		e.preventDefault();
-
-// 		$('form').trigger("reset");
-// 		$('.finalCocktailDescision').empty();
-// 		$('.finishForm').empty();
-
-// 	});
-// });
-
-
-			// $(`.resetButton`).on(`click`, () => {
-			// 	$(`form`).trigger(`reset`).remove();
-			// 	$(`input[type="radio"]`).attr(`checked`, false);
-			// })
-
-			// $(`button`).on(`click`, function (event) {
-			// 	event.preventDefault();
-			// 	// $(`form`).trigger(`reset`).remove();
-			// 	$(`input[type="radio"]`).checked = false;
-			// })
+AOS.init({
+	duration: 1000
+});
