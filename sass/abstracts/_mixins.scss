@@ -1,25 +1,19 @@
 // RESPONSIVE
 
-@mixin tablet {
+@mixin tabletLarge {
+	@media only screen and (max-width: 940px) {
+		@content;
+	}
+}
+
+@mixin tabletSmall {
 	@media only screen and (max-width: 768px) {
 		@content;
 	}
 }
 
-@mixin phone-large {
+@mixin mobileLarge {
 	@media only screen and (max-width: 425px) {
-		@content;
-	}
-}
-
-@mixin phone-medium {
-	@media only screen and (max-width: 325px) {
-		@content;
-	}
-}
-
-@mixin phone-small {
-	@media only screen and (max-width: 320px) {
 		@content;
 	}
 }

@@ -11,3 +11,10 @@
   padding: 5%;
   text-align: center;
 }
+
+@include mobileLarge {
+
+  .resultsContent h3 {
+    font-size: 1rem;
+  }
+}

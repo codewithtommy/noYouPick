@@ -273,11 +273,9 @@ $(document).ready(function() {
 			}
 			// Create a variable and make sure it holds onto whatever FUNCTION it produces from randomIndex(foodAfford).
 			foodResult = randomIndex(foodAfford);
-			console.log(randomIndex(foodAfford));
 
 			// DISPLAY/ RETURN the random results from the array to: (div/headings/paragraph etc.) // NOTE: Log console.log here to do tests/ debug
 			displayResult(foodResult);
-			console.log(foodResult);
 			
 		// ELSE IF, FOOD && EXPENSIVE are checked. Do the following...
 		} else if ($(`#food:checked`).val() && $(`#expensive:checked`).val())	{

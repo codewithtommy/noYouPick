@@ -23,3 +23,37 @@ header {
 		text-shadow: 1px 1px 1px $blk;
 	}
 }
+
+@include tabletLarge {
+
+	.hero .wrapper {
+		padding: 0% 10%;
+	}
+}
+
+@include tabletSmall {
+
+	.heroContent p {
+		padding: 0% 10%;
+	}
+}
+
+@include mobileLarge {
+
+	.hero .wrapper {
+		padding: 0%;
+	}
+
+	.heroContent {
+
+		h1 {
+			font-size: 6rem;
+			padding: 0% 2.5%;
+		}
+
+		p {
+			font-size: 1rem;
+			padding: 0% 2.5%;
+		}
+	}
+}

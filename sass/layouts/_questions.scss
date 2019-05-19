@@ -24,3 +24,33 @@
     padding: 0% 15%;
   }
 }
+
+@include tabletSmall {
+
+  .wrapper {
+    padding: 0% 10%;
+  }
+}
+
+@include mobileLarge {
+
+  .questions .wrapper {
+    padding: 0% 5%;
+  }
+
+  .questionsOne {
+
+    h2 {
+      padding: 0% 2.5%;
+    }
+
+    p {
+      padding: 0% 5%;
+    }
+  }
+
+  .questionsTwo .flexAlign {
+    display: flex;
+    padding: 0% 10%;
+  }
+}
