@@ -298,10 +298,6 @@ form label:hover {
   cursor: pointer;
 }
 
-.formOne {
-  margin-top: 7.5%;
-}
-
 .formTwo {
   margin: 7.5% 0%;
 }
@@ -454,7 +450,7 @@ header input:checked + .creditsBox {
     width: 95%;
   }
   header .contact {
-    margin-top: 10%;
+    margin: 10% 0%;
   }
   .heroContent {
     padding-top: 15%;
