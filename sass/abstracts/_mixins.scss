@@ -18,6 +18,12 @@
 	}
 }
 
+@mixin mobileSmall {
+	@media only screen and (max-width: 320px) {
+		@content;
+	}
+}
+
 // FONTS
 
 @mixin fontProp ($col, $fFamily, $fSize, $fWeight) {

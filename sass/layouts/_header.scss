@@ -12,9 +12,8 @@ header {
 	.heroContent {
 		text-align: center;
 
-		i {
+		.infinityContainer i {
 			@include fontProp ($colComp, null, 6.5rem, null);
-			text-shadow: 5px 2px 10px $blk;
 		}
 
 		p {
@@ -48,7 +47,6 @@ header {
   .credits i {
 		@include fontProp ($colComp, null, 1.25rem, null);
 		padding: 0%;
-		text-shadow: 5px 2px 10px $blk;
     transition: all 0.2s ease-in-out;
 
     &:hover {
@@ -90,23 +88,23 @@ header {
 
 @include tabletLarge {
 
-	.hero .wrapper {
-		padding: 0% 10%;
-	}
-
 	header .creditsBox {
 		width: 30%;
+	}
+
+	.hero .wrapper {
+		padding: 0% 10%;
 	}
 }
 
 @include tabletSmall {
 
-	.heroContent p {
-		padding: 0% 10%;
-	}
-
 	header .creditsBox {
 		width: 35%;
+	}
+	
+	.heroContent p {
+		padding: 0% 10%;
 	}
 }
 
@@ -114,19 +112,6 @@ header {
 
 	.hero .wrapper {
 		padding: 0%;
-	}
-
-	.heroContent {
-
-		h1 {
-			font-size: 5.5rem;
-			padding: 0% 2.5%;
-		}
-
-		p {
-			font-size: 1rem;
-			padding: 0% 5%;
-		}
 	}
 
 	header {
@@ -145,5 +130,30 @@ header {
 		}
 	}
 
+	.heroContent {
+		padding-top: 15%;
 
+		h1 {
+			font-size: 5rem;
+			padding: 0% 2.5%;
+		}
+
+		p {
+			font-size: 1rem;
+			padding: 0% 5%;
+		}
+	}
+
+	.infinityContainer i {
+		display: none;
+	}
+}
+
+@include mobileSmall {
+	.heroContent {
+
+		h1 {
+			font-size: 4rem;
+		}
+	}
 }
