@@ -1,11 +1,13 @@
 # noYouPick
 
 PURPOSE:
+
 Do you ever get indecisive when it comes to rallying up your friends or date to go grab food or to do something? 
 Well, "No You Pick!" has you covered! Just simply complete a few questions and in return, get a randomized suggestion! 
 Try to stick to the plan and don't use the reset button :). 
 
 HOW DOES IT WORK?
+
 // 1.) The USER is given two choices. Food or Activity.
 // 2.) After selecting FOOD or ACTIVITY. The USER is given another set of choices, based on what they chosen for the first. 
 // 2a.) IF FOOD is selected, USER will be asked: Affordable or Expensive?
@@ -14,4 +16,5 @@ HOW DOES IT WORK?
 // 4.) Take the result/ suggestion and go enjoy!
 
 CREDITS:
+
 Background HERO image: Is taken by Scott Webb @ScottWebb from Unsplash. https://unsplash.com/photos/G6ZLNo28z2k
