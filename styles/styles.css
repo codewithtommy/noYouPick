@@ -460,7 +460,7 @@ header input:checked + .creditsBox {
     padding: 0% 2.5%;
   }
   .heroContent p {
-    font-size: 1rem;
+    font-size: 0.75rem;
     padding: 0% 5%;
   }
   .infinityContainer i {
