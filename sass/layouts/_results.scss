@@ -15,6 +15,20 @@
 @include mobileLarge {
 
   .resultsContent h3 {
-    font-size: 1rem;
+    font-size: 1.25rem;
+  }
+}
+
+@include tabletSmall {
+
+  .results .wrapper {
+    padding: 0% 10%;
+  }
+}
+
+@include mobileLarge {
+
+  .results .wrapper {
+    padding: 0% 5%;
   }
 }

@@ -1,6 +1,10 @@
 .questions {
   background: linear-gradient($colPrim, $colSeco);
-	display: flex;
+  display: flex;
+  
+  .wrapper {
+    padding-top: 5%;
+  }
 }
 
 .questionsOne,
@@ -25,9 +29,16 @@
   }
 }
 
+@include tabletLarge {
+  
+  .questions .wrapper {
+    padding-top: 0%;
+  }
+}
+
 @include tabletSmall {
 
-  .wrapper {
+  .questions .wrapper {
     padding: 0% 10%;
   }
 }

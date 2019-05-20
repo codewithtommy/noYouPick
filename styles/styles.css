@@ -28,8 +28,8 @@ img {
 
 h1 {
   color: #FFFFFF;
-  font-family: "Roboto", sans-serif;
-  font-size: 7rem;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 6rem;
   font-weight: 700;
   margin: 0%;
   line-height: 150px;
@@ -37,15 +37,14 @@ h1 {
 }
 
 h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Luckiest Guy", cursive;
   font-size: 2.25rem;
   font-weight: 700;
-  letter-spacing: 2px;
   text-shadow: 2.5px 2.5px 2px #C0C0C0;
 }
 
 h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Luckiest Guy", cursive;
   font-size: 2rem;
   font-weight: 700;
   margin: 2.5% 0% 5%;
@@ -311,6 +310,43 @@ footer p {
   text-align: center;
 }
 
+footer .credits {
+  position: absolute;
+  bottom: -30.5%;
+  left: 2.5%;
+}
+
+footer .credits i {
+  font-size: 1.25rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+footer .credits i:hover {
+  color: #55A4F1;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+footer .creditsBox {
+  position: absolute;
+  bottom: -22.5%;
+  left: -15.5%;
+  background: rgba(85, 164, 241, 0.5);
+  font-size: 0.8rem;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  width: 15%;
+}
+
+footer input {
+  display: none;
+}
+
+footer input:checked + .creditsBox {
+  left: 2.5%;
+}
+
 header {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#55a4f1)), url(../assets/heroTorontoOpti.jpg) no-repeat fixed;
   background: linear-gradient(rgba(0, 0, 0, 0), #55a4f1), url(../assets/heroTorontoOpti.jpg) no-repeat fixed;
@@ -332,7 +368,7 @@ header .heroContent {
 
 header .heroContent i {
   color: #FFB64D;
-  font-size: 7rem;
+  font-size: 6.5rem;
   text-shadow: 5px 2px 10px #000000;
 }
 
@@ -351,7 +387,12 @@ header .contact {
 
 header .contact i {
   color: #FFB64D;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  padding: 0% 2.5%;
+}
+
+header .contact i:hover {
+  color: #FFDCAA;
 }
 
 @media only screen and (max-width: 940px) {
@@ -371,12 +412,12 @@ header .contact i {
     padding: 0%;
   }
   .heroContent h1 {
-    font-size: 6rem;
+    font-size: 5.5rem;
     padding: 0% 2.5%;
   }
   .heroContent p {
     font-size: 1rem;
-    padding: 0% 2.5%;
+    padding: 0% 5%;
   }
 }
 
@@ -386,6 +427,10 @@ header .contact i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.questions .wrapper {
+  padding-top: 5%;
 }
 
 .questionsOne,
@@ -407,8 +452,14 @@ header .contact i {
   padding: 0% 15%;
 }
 
+@media only screen and (max-width: 940px) {
+  .questions .wrapper {
+    padding-top: 0%;
+  }
+}
+
 @media only screen and (max-width: 768px) {
-  .wrapper {
+  .questions .wrapper {
     padding: 0% 10%;
   }
 }
@@ -460,7 +511,19 @@ header .contact i {
 
 @media only screen and (max-width: 425px) {
   .resultsContent h3 {
-    font-size: 1rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .results .wrapper {
+    padding: 0% 10%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .results .wrapper {
+    padding: 0% 5%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

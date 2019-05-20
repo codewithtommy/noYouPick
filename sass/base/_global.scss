@@ -1,6 +1,6 @@
 // FONT
 
-$fontPrim: 'Roboto', sans-serif;
+$fontPrim: 'Luckiest Guy', cursive;
 $fontSeco: 'Raleway', sans-serif;
 
 // COLOR PALETTE 
@@ -21,7 +21,7 @@ $shadow: #C0C0C0;
 
 $light: '300';
 $normal: '400';
-$semibold: '400';
+$semibold: '500';
 $bold: '700';
 
 html {
@@ -44,7 +44,7 @@ img {
 }
 
 h1 {
-	@include fontProp ($wht, $fontPrim, 7rem, 700);
+	@include fontProp ($wht, $fontPrim, 6rem, 700);
 	margin:	0%;
 	line-height: 150px;
 	text-shadow: 5px 2px 10px $blk;
@@ -52,7 +52,6 @@ h1 {
 
 h2 {
 	@include fontProp (null, $fontPrim, 2.25rem, 700);
-	letter-spacing: 2px;
 	text-shadow: 2.5px 2.5px 2px $shadow;
 }
 

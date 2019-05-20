@@ -9,4 +9,35 @@ footer {
   p {
     text-align: center;
   }
+
+  .credits {
+    @include position (absolute, null, null, -30.5%, 2.5%);
+  }
+
+  .credits i {
+    font-size: 1.25rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $colPrim;
+      transform: scale(1.4);
+    }
+  }
+
+  .creditsBox {
+    @include position (absolute, null, null, -22.5%, -15.5%);
+    background: rgba(85, 164, 241, .5);
+    font-size: 0.8rem;
+    transition: all 1s;
+    width: 15%;
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked + .creditsBox {
+    left: 2.5%;
+  }
 }
+
