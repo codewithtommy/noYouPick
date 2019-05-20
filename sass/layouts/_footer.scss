@@ -3,33 +3,50 @@ footer {
   display: flex;
 
   .wrapper {
-    padding-bottom: 0%;
+    padding: 0%;
   }
   
   p {
+    margin-bottom: 0%;
     text-align: center;
   }
 
   .credits {
-    @include position (absolute, null, null, -30.5%, 2.5%);
+    padding: 1% 0%;
+    text-align: center
   }
 
   .credits i {
     font-size: 1.25rem;
+    padding: 0%;
     transition: all 0.2s ease-in-out;
 
     &:hover {
       color: $colPrim;
+      cursor: pointer;
       transform: scale(1.4);
     }
   }
 
   .creditsBox {
-    @include position (absolute, null, null, -22.5%, -15.5%);
-    background: rgba(85, 164, 241, .5);
+    @include position (absolute, null, null, 0%, -80%);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px $blk;
     font-size: 0.8rem;
+    transform: translateY(25%);
     transition: all 1s;
-    width: 15%;
+    width: 50%;
+
+    p {
+      text-align: left;
+      margin: 0%;
+      padding: 5%;
+
+      .boldy {
+        font-weight: bolder;
+      }
+    }
   }
 
   input {
@@ -37,7 +54,17 @@ footer {
   }
 
   input:checked + .creditsBox {
-    left: 2.5%;
+    left: 25%;
   }
 }
 
+@include mobileLarge {
+
+  .wrapper .creditsBox {
+    width: 75%;
+  }
+
+footer input:checked + .creditsBox {
+    left: 12.5%;
+  }
+}
