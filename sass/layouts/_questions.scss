@@ -29,6 +29,7 @@
   }
 }
 
+// MEDIA @ 940px
 @include tabletLarge {
   
   .questions .wrapper {
@@ -36,6 +37,7 @@
   }
 }
 
+// MEDIA @ 768px
 @include tabletSmall {
 
   .questions .wrapper {
@@ -43,6 +45,7 @@
   }
 }
 
+// MEDIA @ 425px
 @include mobileLarge {
 
   .questions .wrapper {

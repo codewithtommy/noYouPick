@@ -12,6 +12,7 @@
   text-align: center;
 }
 
+// MEDIA @ 940px
 @include mobileLarge {
 
   .resultsContent h3 {
@@ -19,6 +20,7 @@
   }
 }
 
+// MEDIA @ 768px
 @include tabletSmall {
 
   .results .wrapper {
@@ -26,6 +28,7 @@
   }
 }
 
+// MEDIA @ 320px
 @include mobileLarge {
 
   .results .wrapper {
