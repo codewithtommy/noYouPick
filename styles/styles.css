@@ -298,6 +298,10 @@ form label:hover {
   cursor: pointer;
 }
 
+.formOne {
+  margin-top: 7.5%;
+}
+
 .formTwo {
   margin: 7.5% 0%;
 }
