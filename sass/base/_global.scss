@@ -24,6 +24,8 @@ $normal: '400';
 $semibold: '500';
 $bold: '700';
 
+// GENERAL
+
 html {
 	font-family: $fontSeco;
 	font-size: 125%;
@@ -37,6 +39,14 @@ img {
 	width: 100%;
 }
 
+a {
+	text-decoration: none;
+}
+
+i {
+	text-shadow: 5px 2px 10px $blk;
+}
+
 .wrapper {
 	@include flexCenter (null, null, flex, column, center);
 	padding: 0% 25%;
@@ -44,7 +54,7 @@ img {
 }
 
 h1 {
-	@include fontProp ($wht, $fontPrim, 6rem, 700);
+	@include fontProp ($wht, $fontPrim, 5rem, 700);
 	margin:	0%;
 	line-height: 150px;
 	text-shadow: 5px 2px 10px $blk;
@@ -52,18 +62,9 @@ h1 {
 
 h2 {
 	@include fontProp (null, $fontPrim, 2.25rem, 700);
-	// text-shadow: 2.5px 2.5px 2px $shadow;
 }
 
 h3 {
 	@include fontProp (null, $fontPrim, 2rem, 700);
 	margin: 2.5% 0% 5%;
-}
-
-a {
-	text-decoration: none;
-}
-
-i {
-	text-shadow: 5px 2px 10px $blk;
 }

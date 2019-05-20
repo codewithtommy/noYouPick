@@ -10,6 +10,7 @@ header {
 		margin-bottom: 0%;
 	}
 	
+	// .heroContent holds: H1/ INFINITY ICON, SUB PARAGRAPH, START, CONTACT ICONS
 	.heroContent {
 		text-align: center;
 
@@ -57,6 +58,7 @@ header {
     }
   }
 
+	// .creditsBox will not be seen on the webpage until icon "i" is clicked.
   .creditsBox {
     @include position (absolute, 10%, null, null, -80%);
     background: rgba(255, 255, 255, 0.9);
@@ -92,13 +94,13 @@ header {
 
 	header {
 
-	.creditsBox {
-		width: 30%;
-	}
+		.creditsBox {
+			width: 30%;
+		}
 
-	.hero .wrapper {
-		padding: 0% 10%;
-	}
+		.hero .wrapper {
+			padding: 0% 10%;
+		}
 	}
 }
 
@@ -137,7 +139,7 @@ header {
 		}
 
 		.heroContent {
-		padding-top: 15%;
+		padding-top: 35%;
 
 			h1 {
 				font-size: 4rem;
@@ -151,6 +153,7 @@ header {
 		}
 	}
 
+	// This is how .creditsBox is hidden.
 	.infinityContainer i {
 		display: none;
 	}
