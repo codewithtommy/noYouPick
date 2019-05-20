@@ -50,6 +50,10 @@ h3 {
   margin: 2.5% 0% 5%;
 }
 
+a {
+  text-decoration: none;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }

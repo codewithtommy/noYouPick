@@ -166,10 +166,11 @@ function displayResult(choice) {
 				<h2>Finally!</h2>
 				<p>It's going to be:</p>
 				<h3 class ="resultText">"${choice}"</h3>
+				<a href = "index.html">
 					<button class="resetButton" aria-hidden="true" title="Reset Button!">
-						<a href = "index.html"></a>
 						<span class="sr-only visuallyHidden">Start Quiz!</span>Poke me to Reset!
 					</button>
+				</a>
 			</div>
 		</div>`
 	)

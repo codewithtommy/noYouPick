@@ -59,3 +59,7 @@ h3 {
 	@include fontProp (null, $fontPrim, 2rem, 700);
 	margin: 2.5% 0% 5%;
 }
+
+a {
+	text-decoration: none;
+}
