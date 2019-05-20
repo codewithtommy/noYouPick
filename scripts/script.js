@@ -209,7 +209,7 @@ $(document).ready(function() {
 		event.preventDefault();
 
 		$(`.firstSubmit`).attr(`disabled`, true);
-		$(`input`).attr(`disabled`, true);
+		$(`input[type="radio"]`).attr(`disabled`, true);
 		$(`html, body`).animate({
 			scrollTop: $(`#subQuestion`).offset().top
 		}, 1000);
@@ -249,7 +249,7 @@ $(document).ready(function() {
 		
 		// Disables input reselection and multiple submissions on submit.
 		$(`.subSubmit`).attr(`disabled`, true);
-		$(`input`).attr(`disabled`, true);
+		$(`input[type="radio"]`).attr(`disabled`, true);
 		// Scroll to element without jQuery plugin.
 		$(`html, body`).animate({
 			scrollTop: $(`#results`).offset().top

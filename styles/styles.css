@@ -307,74 +307,11 @@ footer {
 }
 
 footer .wrapper {
-  padding: 0%;
+  padding: 0% 25%;
 }
 
 footer p {
-  margin-bottom: 0%;
   text-align: center;
-}
-
-footer .credits {
-  padding: 1% 0%;
-  text-align: center;
-}
-
-footer .credits i {
-  font-size: 1.25rem;
-  padding: 0%;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-footer .credits i:hover {
-  color: #55A4F1;
-  cursor: pointer;
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-}
-
-footer .creditsBox {
-  position: absolute;
-  bottom: 0%;
-  left: -80%;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 10px #000000;
-          box-shadow: 2px 2px 10px #000000;
-  font-size: 0.8rem;
-  -webkit-transform: translateY(25%);
-          transform: translateY(25%);
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  width: 50%;
-}
-
-footer .creditsBox p {
-  text-align: left;
-  margin: 0%;
-  padding: 5%;
-}
-
-footer .creditsBox p .boldy {
-  font-weight: bolder;
-}
-
-footer input {
-  display: none;
-}
-
-footer input:checked + .creditsBox {
-  left: 25%;
-}
-
-@media only screen and (max-width: 425px) {
-  .wrapper .creditsBox {
-    width: 75%;
-  }
-  footer input:checked + .creditsBox {
-    left: 12.5%;
-  }
 }
 
 header {
@@ -425,15 +362,77 @@ header .contact i:hover {
   color: #FFDCAA;
 }
 
+header .credits {
+  position: absolute;
+  top: 2.5%;
+  left: 2.5%;
+  text-align: center;
+}
+
+header .credits i {
+  color: #FFB64D;
+  font-size: 1.25rem;
+  padding: 0%;
+  text-shadow: 5px 2px 10px #000000;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header .credits i:hover {
+  color: #FFDCAA;
+  cursor: pointer;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+header .creditsBox {
+  position: absolute;
+  top: 10%;
+  left: -80%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 10px #000000;
+          box-shadow: 2px 2px 10px #000000;
+  font-size: 0.8rem;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  width: 20%;
+  z-index: 1000;
+}
+
+header .creditsBox p {
+  text-align: left;
+  margin: 0%;
+  padding: 7.5%;
+}
+
+header .creditsBox p .boldy {
+  font-weight: bolder;
+}
+
+header input {
+  display: none;
+}
+
+header input:checked + .creditsBox {
+  left: 2.5%;
+}
+
 @media only screen and (max-width: 940px) {
   .hero .wrapper {
     padding: 0% 10%;
+  }
+  header .creditsBox {
+    width: 30%;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .heroContent p {
     padding: 0% 10%;
+  }
+  header .creditsBox {
+    width: 35%;
   }
 }
 
@@ -448,6 +447,16 @@ header .contact i:hover {
   .heroContent p {
     font-size: 1rem;
     padding: 0% 5%;
+  }
+  header .credits {
+    left: 5%;
+  }
+  header .creditsBox {
+    left: -100%;
+    width: 95%;
+  }
+  header .contact {
+    margin-top: 10%;
   }
 }
 
